@@ -5,3 +5,8 @@ res://characters/character_scenes/placeholder_character.tscn
 res://scenes/3.caterpillar_scene.tscn
 res://scenes/4.city_scene.tscn
 res://Scenes/0.main.tscn
+res://scenes/transition_to_chase_scn.gd
+res://scenes/2.chase_scene.tscn
+res://scenes/0.main.tscn
+res://scenes/transition_to_caterpillar.gd
+res://scenes/transition_to_city.gd

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://co4c3vqhm8r0h"]
 
-[ext_resource type="Texture2D" uid="uid://c2162whan88jt" path="res://backgrounds/placeholder_backgrounds/Green.png" id="1_guhmf"]
+[ext_resource type="Texture2D" uid="uid://0yfscspfm1fo" path="res://backgrounds/placeholder_backgrounds/Blue.png" id="1_yygbl"]
 [ext_resource type="Texture2D" uid="uid://laa2oboh1koj" path="res://terrain/Terrain (16x16).png" id="2_i3un2"]
 [ext_resource type="PackedScene" uid="uid://8vdibio3twlg" path="res://characters/character_scenes/placeholder_character.tscn" id="3_4ycc6"]
 
@@ -463,7 +463,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_guhmf")
+texture = ExtResource("1_yygbl")
 stretch_mode = 1
 
 [node name="TileMap" type="TileMap" parent="CanvasLayer"]
