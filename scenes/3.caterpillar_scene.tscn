@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://ncuyxgld8bwc"]
 
-[ext_resource type="Texture2D" uid="uid://bkv2ev4xuiom2" path="res://backgrounds/pixelated background 1.png" id="1_jan4t"]
+[ext_resource type="Texture2D" uid="uid://cfmaveujs671g" path="res://backgrounds/placeholder_backgrounds/Gray.png" id="1_2lyyl"]
 [ext_resource type="Texture2D" uid="uid://laa2oboh1koj" path="res://terrain/Terrain (16x16).png" id="2_gt0j1"]
 [ext_resource type="PackedScene" uid="uid://8vdibio3twlg" path="res://characters/character_scenes/placeholder_character.tscn" id="3_gnimc"]
 [ext_resource type="Script" path="res://scenes/transition_to_city.gd" id="4_ma7jm"]
@@ -465,14 +465,10 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -29.0
-offset_top = -5.0
-offset_right = 1248.0
-offset_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_jan4t")
-expand_mode = 1
+texture = ExtResource("1_2lyyl")
+stretch_mode = 1
 
 [node name="TileMap" type="TileMap" parent="CanvasLayer"]
 scale = Vector2(3, 3)
