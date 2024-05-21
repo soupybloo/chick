@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://db44lv0i3pcef"]
 
-[ext_resource type="Texture2D" uid="uid://bkv2ev4xuiom2" path="res://backgrounds/pixelated background 1.png" id="1_utgi3"]
+[ext_resource type="Texture2D" uid="uid://dkjrt333gv3f0" path="res://scenes/flower pot pixelated.png" id="1_gh0ov"]
 [ext_resource type="Texture2D" uid="uid://laa2oboh1koj" path="res://terrain/Terrain (16x16).png" id="2_gn68g"]
 [ext_resource type="PackedScene" uid="uid://8vdibio3twlg" path="res://characters/character_scenes/placeholder_character.tscn" id="3_gddgl"]
 
@@ -463,11 +463,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -11.0
 offset_top = -1.0
-offset_right = 1449.0
+offset_right = 9.0
 offset_bottom = 19.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_utgi3")
+pivot_offset = Vector2(2307, 98)
+texture = ExtResource("1_gh0ov")
 expand_mode = 1
 
 [node name="TileMap" type="TileMap" parent="CanvasLayer"]
