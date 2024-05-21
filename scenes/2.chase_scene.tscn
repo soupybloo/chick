@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://pa3gpodtjvd"]
 
-[ext_resource type="Texture2D" path="res://backgrounds/pixel road.png" id="1_0sxqi"]
+[ext_resource type="Texture2D" uid="uid://ceva7rq72k1yc" path="res://backgrounds/pixel road.png" id="1_0sxqi"]
 [ext_resource type="Texture2D" uid="uid://laa2oboh1koj" path="res://terrain/Terrain (16x16).png" id="2_6xitw"]
 [ext_resource type="PackedScene" uid="uid://8vdibio3twlg" path="res://characters/character_scenes/placeholder_character.tscn" id="3_8d06a"]
 [ext_resource type="Script" path="res://scenes/transition_to_caterpillar.gd" id="4_3075u"]

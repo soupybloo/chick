@@ -486,6 +486,7 @@ position = Vector2(0, 528)
 
 [node name="Camera2D" type="Camera2D" parent="CanvasLayer/CharacterBody2D"]
 position = Vector2(194, -45)
+ignore_rotation = false
 
 [node name="Area2D" type="Area2D" parent="CanvasLayer"]
 script = ExtResource("4_ma7jm")
