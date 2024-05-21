@@ -1,0 +1,33 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1716270023
+icon.svg::CompressedTexture2D::7536886541757211564::1716243776::1716267700::1::::<><>::
+::res://backgrounds/::1716268282
+::res://backgrounds/placeholder_backgrounds/::1716268297
+Blue.png::CompressedTexture2D::1804602019844259376::1716268297::1716268297::1::::<><>::
+Brown.png::CompressedTexture2D::76104480120835363::1716268297::1716268297::1::::<><>::
+Gray.png::CompressedTexture2D::5148595861720802226::1716268297::1716268297::1::::<><>::
+Green.png::CompressedTexture2D::6723545576775865185::1716268297::1716268297::1::::<><>::
+Pink.png::CompressedTexture2D::8208349421141569501::1716268297::1716268297::1::::<><>::
+Purple.png::CompressedTexture2D::8762939609317202935::1716268297::1716268297::1::::<><>::
+Yellow.png::CompressedTexture2D::8946742924545206565::1716268297::1716268297::1::::<><>::
+::res://characters/::1716269731
+::res://characters/character_scenes/::1716270201
+placeholder_character.gd::GDScript::-1::1716269924::0::1::::<>CharacterBody2D<>::
+placeholder_character.tscn::PackedScene::2359780275775933932::1716270201::0::1::::<><>::uid://ci123ffoj668m::::res://characters/character_textures/placeholder_character/Jump (32x32).png<>res://characters/character_scenes/placeholder_character.gd
+::res://characters/character_textures/::1716269731
+::res://characters/character_textures/placeholder_character/::1716269731
+Double Jump (32x32).png::CompressedTexture2D::1620642794380123711::1566506240::1716269731::1::::<><>::
+Fall (32x32).png::CompressedTexture2D::7429043904338627614::1565240420::1716269731::1::::<><>::
+Hit (32x32).png::CompressedTexture2D::936691413420556163::1566531656::1716269731::1::::<><>::
+Idle (32x32).png::CompressedTexture2D::3609385657679073816::1566506222::1716269731::1::::<><>::
+Jump (32x32).png::CompressedTexture2D::5389715570120198130::1565240398::1716269731::1::::<><>::
+Run (32x32).png::CompressedTexture2D::865169613568093316::1566506230::1716269731::1::::<><>::
+Wall Jump (32x32).png::CompressedTexture2D::308702048870134176::1566506248::1716269731::1::::<><>::
+::res://scenes/::1716270618
+0.main.tscn::PackedScene::3154353502925322181::1716270201::0::1::::<><>::
+1.truck_scene.tscn::PackedScene::5368686654165594856::1716270201::0::1::::<><>::uid://c2162whan88jt::::res://backgrounds/placeholder_backgrounds/Green.png<>uid://laa2oboh1koj::::res://terrain/Terrain (16x16).png<>uid://8vdibio3twlg::::res://characters/character_scenes/placeholder_character.tscn
+2.chase_scene.tscn::PackedScene::31016007493263673::1716270600::0::1::::<><>::uid://c2162whan88jt::::res://backgrounds/placeholder_backgrounds/Green.png<>uid://laa2oboh1koj::::res://terrain/Terrain (16x16).png<>uid://8vdibio3twlg::::res://characters/character_scenes/placeholder_character.tscn
+3.caterpillar_scene.tscn::PackedScene::917842139522564746::1716270618::0::1::::<><>::uid://c2162whan88jt::::res://backgrounds/placeholder_backgrounds/Green.png<>uid://laa2oboh1koj::::res://terrain/Terrain (16x16).png<>uid://8vdibio3twlg::::res://characters/character_scenes/placeholder_character.tscn
+4.city_scene.tscn::PackedScene::5815524697443884229::1716270630::0::1::::<><>::uid://c2162whan88jt::::res://backgrounds/placeholder_backgrounds/Green.png<>uid://laa2oboh1koj::::res://terrain/Terrain (16x16).png<>uid://8vdibio3twlg::::res://characters/character_scenes/placeholder_character.tscn
+::res://terrain/::1716268845
+Terrain (16x16).png::CompressedTexture2D::772126233971979085::1716268845::1716268845::1::::<><>::
