@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://ciqvqqplkt5eq"]
 
-[ext_resource type="Texture2D" uid="uid://cm65d0fdefry8" path="res://backgrounds/inside truck pixel.png" id="1_ogwpy"]
+[ext_resource type="Texture2D" uid="uid://c2162whan88jt" path="res://backgrounds/placeholder_backgrounds/Green.png" id="1_uq3o0"]
 [ext_resource type="Texture2D" uid="uid://laa2oboh1koj" path="res://terrain/Terrain (16x16).png" id="2_hxs57"]
 [ext_resource type="PackedScene" uid="uid://8vdibio3twlg" path="res://characters/character_scenes/placeholder_character.tscn" id="3_pgolu"]
 [ext_resource type="Script" path="res://scenes/transition_to_chase_scn.gd" id="4_oto65"]
@@ -465,14 +465,10 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -544.0
-offset_top = -537.0
-offset_right = 639.0
-offset_bottom = 341.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_ogwpy")
-stretch_mode = 2
+texture = ExtResource("1_uq3o0")
+stretch_mode = 1
 
 [node name="TileMap" type="TileMap" parent="CanvasLayer"]
 scale = Vector2(3, 3)
