@@ -1,12 +1,12 @@
-res://Scenes/truck_scene.tscn
-res://Scenes/4.city_scene.tscn
+<<<<<<< HEAD
 res://scenes/1.truck_scene.tscn
-res://characters/character_scenes/placeholder_character.tscn
+res://scenes/2.chase_scene.tscn
 res://scenes/3.caterpillar_scene.tscn
 res://scenes/4.city_scene.tscn
-res://Scenes/0.main.tscn
-res://scenes/transition_to_chase_scn.gd
+=======
+res://scenes/4.city_scene.tscn
+res://scenes/1.truck_scene.tscn
 res://scenes/2.chase_scene.tscn
-res://scenes/0.main.tscn
-res://scenes/transition_to_caterpillar.gd
-res://scenes/transition_to_city.gd
+res://scenes/3.caterpillar_scene.tscn
+res://characters/character_scenes/placeholder_character.tscn
+>>>>>>> f714262d0c5be40a5ee1247db8212aa21280109a
