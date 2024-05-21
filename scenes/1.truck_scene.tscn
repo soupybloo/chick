@@ -456,7 +456,7 @@ sources/0 = SubResource("TileSetAtlasSource_3ddin")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qd6tn"]
 size = Vector2(267, 259)
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

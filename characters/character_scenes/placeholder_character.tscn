@@ -1,8 +1,8 @@
 [gd_scene load_steps=14 format=3 uid="uid://8vdibio3twlg"]
 
 [ext_resource type="Script" path="res://characters/character_scenes/placeholder_character.gd" id="1_wbdfx"]
-[ext_resource type="Texture2D" uid="uid://23fay6exosx8" path="res://characters/character_scenes/spritesheet (1).png" id="2_tyr6l"]
-[ext_resource type="Texture2D" uid="uid://b2hr6lmv6xo2s" path="res://characters/character_scenes/spritesheet (3).png" id="2_vdbkv"]
+[ext_resource type="Texture2D" path="res://characters/character_scenes/spritesheet (1).png" id="2_tyr6l"]
+[ext_resource type="Texture2D" path="res://characters/character_scenes/spritesheet (3).png" id="2_vdbkv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yfemf"]
 atlas = ExtResource("2_vdbkv")
@@ -74,20 +74,20 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lq1bv"]
-size = Vector2(65, 76)
+size = Vector2(264.5, 276.5)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_wbdfx")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(15.5, -16.5)
-scale = Vector2(2.53125, 2.65625)
+position = Vector2(258.469, -51.5)
+scale = Vector2(7.39062, 7.69)
 sprite_frames = SubResource("SpriteFrames_wdy5u")
 animation = &"walkRight"
 autoplay = "defaultBob"
-frame_progress = 0.587924
+frame_progress = 0.937323
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(14.5, -13)
+position = Vector2(206.75, -32.25)
 shape = SubResource("RectangleShape2D_lq1bv")

@@ -1,10 +1,5 @@
-res://Scenes/1.truck_scene.tscn
-res://characters/Chick.tscn
-res://characters/character_scenes/Chick.tscn
 res://scenes/4.city_scene.tscn
-res://scenes/3.caterpillar_scene.tscn
-res://scenes/2.chase_scene.tscn
-res://scenes/0.main.tscn
 res://scenes/1.truck_scene.tscn
+res://scenes/2.chase_scene.tscn
+res://scenes/3.caterpillar_scene.tscn
 res://characters/character_scenes/placeholder_character.tscn
-res://characters/character_scenes/placeholder_character.gd
