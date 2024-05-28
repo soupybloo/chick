@@ -1,58 +1,59 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1716504451
-icon.svg::CompressedTexture2D::7536886541757211564::1716319883::1716504370::1::::<><>::
-::res://backgrounds/::1716504451
-8 bit alley.png::CompressedTexture2D::1061473051441967561::1716322188::1716322188::1::::<><>::
-flower pot pixelated.png::CompressedTexture2D::2244365243669673221::1716329504::1716329504::1::::<><>::
-inside truck pixel.png::CompressedTexture2D::5680931389532796701::1716329504::1716329504::1::::<><>::
-pixel road.png::CompressedTexture2D::5097006739282805274::1716322358::1716322358::1::::<><>::
-pixelated background 1.png::CompressedTexture2D::3133308703750747915::1716321902::1716321902::1::::<><>::
-truck chase.jpg::CompressedTexture2D::7716261446762760144::1716321201::1716321201::1::::<><>::
-::res://backgrounds/Background assets/::1716504459
-shitty cardboard box.png::CompressedTexture2D::8583049504139501724::1716504459::1716504459::1::::<><>::
-::res://backgrounds/placeholder_backgrounds/::1716504441
-Blue.png::CompressedTexture2D::1804602019844259376::1716319883::1716319883::1::::<><>::
-Brown.png::CompressedTexture2D::76104480120835363::1716319883::1716319883::1::::<><>::
-Gray.png::CompressedTexture2D::5148595861720802226::1716319883::1716319883::1::::<><>::
-Green.png::CompressedTexture2D::6723545576775865185::1716319883::1716319883::1::::<><>::
-Pink.png::CompressedTexture2D::8208349421141569501::1716319883::1716319883::1::::<><>::
-Purple.png::CompressedTexture2D::8762939609317202935::1716319883::1716319883::1::::<><>::
-Yellow.png::CompressedTexture2D::8946742924545206565::1716319883::1716319883::1::::<><>::
-::res://characters/::1716329504
-Chick.tscn::PackedScene::2976246440969986161::1716329504::0::1::::<><>::
-::res://characters/character_scenes/::1716503678
-Chick.gd::GDScript::-1::1716329504::0::1::::<>Area2D<>::
-Chick.tscn::PackedScene::7806444087257848336::1716329504::0::1::::<><>::res://characters/character_scenes/Chick.gd<>uid://2jmh1g2jhx86::::res://characters/character_textures/placeholder_character/Leg Up, Beak Right.png<>uid://drapa406wtgjc::::res://characters/character_textures/placeholder_character/Legs Down, Beak Right.png
-placeholder_character.gd::GDScript::-1::1716320965::0::1::::<>CharacterBody2D<>::
-placeholder_character.tscn::PackedScene::2359780275775933932::1716503678::0::1::::<><>::res://characters/character_scenes/placeholder_character.gd<>uid://23fay6exosx8::::res://characters/character_scenes/spritesheet (1).png<>uid://b2hr6lmv6xo2s::::res://characters/character_scenes/spritesheet (3).png
-spritesheet (1).png::CompressedTexture2D::1953206248966770071::1716320965::1716320965::1::::<><>::
-spritesheet (2).png::CompressedTexture2D::2321638345668364731::1716320965::1716320965::1::::<><>::
-spritesheet (3).png::CompressedTexture2D::4297058251977471528::1716320965::1716320965::1::::<><>::
-spritesheet.png::CompressedTexture2D::9180474307057135486::1716320965::1716320965::1::::<><>::
-::res://characters/character_textures/::1716319883
-::res://characters/character_textures/placeholder_character/::1716320965
-Double Jump (32x32).png::CompressedTexture2D::1620642794380123711::1716319883::1716319883::1::::<><>::
-Fall (32x32).png::CompressedTexture2D::7429043904338627614::1716319883::1716319883::1::::<><>::
-Hit (32x32).png::CompressedTexture2D::936691413420556163::1716319883::1716319883::1::::<><>::
-Idle (32x32).png::CompressedTexture2D::3609385657679073816::1716319883::1716319883::1::::<><>::
-Jump (32x32).png::CompressedTexture2D::5389715570120198130::1716319883::1716319883::1::::<><>::
-Leg Up, Beak Left.png::CompressedTexture2D::2160839594960521244::1716320965::1716320965::1::::<><>::
-Leg Up, Beak Right.png::CompressedTexture2D::1914420658598960773::1716320965::1716320965::1::::<><>::
-Legs Down, Beak Left.png::CompressedTexture2D::5120111823358356952::1716320965::1716320965::1::::<><>::
-Legs Down, Beak Right.png::CompressedTexture2D::8353384711053266788::1716320965::1716320965::1::::<><>::
-pixil-frame-0.png::CompressedTexture2D::6332884874077174914::1716320965::1716320965::1::::<><>::
-Run (32x32).png::CompressedTexture2D::865169613568093316::1716319883::1716319883::1::::<><>::
-Wall Jump (32x32).png::CompressedTexture2D::308702048870134176::1716319883::1716319883::1::::<><>::
-::res://scenes/::1716503678
-0.main.tscn::PackedScene::7232739945307272693::1716319883::0::1::::<><>::
-1.truck_scene.tscn::PackedScene::5368686654165594856::1716503677::0::1::::<><>::uid://cm65d0fdefry8::::res://backgrounds/inside truck pixel.png<>uid://laa2oboh1koj::::res://terrain/Terrain (16x16).png<>uid://8vdibio3twlg::::res://characters/character_scenes/placeholder_character.tscn<>res://scenes/transition_to_chase_scn.gd
-2.chase_scene.tscn::PackedScene::31016007493263673::1716503678::0::1::::<><>::uid://dh62x0wptmwpk::::res://backgrounds/truck chase.jpg<>uid://laa2oboh1koj::::res://terrain/Terrain (16x16).png<>uid://8vdibio3twlg::::res://characters/character_scenes/placeholder_character.tscn<>res://scenes/transition_to_caterpillar.gd
-3.caterpillar_scene.tscn::PackedScene::917842139522564746::1716503678::0::1::::<><>::uid://bkv2ev4xuiom2::::res://backgrounds/pixelated background 1.png<>uid://laa2oboh1koj::::res://terrain/Terrain (16x16).png<>uid://8vdibio3twlg::::res://characters/character_scenes/placeholder_character.tscn<>res://scenes/transition_to_city.gd
-4.city_scene.tscn::PackedScene::5815524697443884229::1716329504::0::1::::<><>::uid://68gmran1wor2::::res://backgrounds/flower pot pixelated.png<>uid://laa2oboh1koj::::res://terrain/Terrain (16x16).png<>uid://8vdibio3twlg::::res://characters/character_scenes/placeholder_character.tscn
-5.flower_pot.tscn::PackedScene::7291099428120206605::1716503678::0::1::::<><>::uid://dkjrt333gv3f0::::res://scenes/flower pot pixelated.png<>uid://laa2oboh1koj::::res://terrain/Terrain (16x16).png<>uid://8vdibio3twlg::::res://characters/character_scenes/placeholder_character.tscn
-flower pot pixelated.png::CompressedTexture2D::7880797521396783419::1716329504::1716329504::1::::<><>::
-transition_to_caterpillar.gd::GDScript::-1::1716319883::0::1::::<>Area2D<>::
-transition_to_chase_scn.gd::GDScript::-1::1716319883::0::1::::<>Area2D<>::
-transition_to_city.gd::GDScript::-1::1716329504::0::1::::<>Area2D<>::
-::res://terrain/::1716319884
-Terrain (16x16).png::CompressedTexture2D::772126233971979085::1716319884::1716319884::1::::<><>::
+::res://::1716930211
+icon.svg::CompressedTexture2D::7536886541757211564::1716275677::1716930211::1::::<><>::
+::res://backgrounds/::1716929091
+8 bit alley.png::CompressedTexture2D::1061473051441967561::1716324953::1716324953::1::::<><>::
+flower pot pixelated.png::CompressedTexture2D::2244365243669673221::1716329495::1716329495::1::::<><>::
+inside truck pixel.png::CompressedTexture2D::5680931389532796701::1716329495::1716329495::1::::<><>::
+pixel road.png::CompressedTexture2D::5097006739282805274::1716324953::1716324953::1::::<><>::
+pixelated background 1.png::CompressedTexture2D::3133308703750747915::1716321954::1716321954::1::::<><>::
+truck chase.jpg::CompressedTexture2D::7716261446762760144::1716324953::1716324953::1::::<><>::
+::res://backgrounds/Background assets/::1716929091
+shitty cardboard box.png::CompressedTexture2D::8583049504139501724::1716929090::1716929090::1::::<><>::
+::res://backgrounds/placeholder_backgrounds/::1716739013
+Blue.png::CompressedTexture2D::1804602019844259376::1716275677::1716275677::1::::<><>::
+Brown.png::CompressedTexture2D::76104480120835363::1716275677::1716275677::1::::<><>::
+Gray.png::CompressedTexture2D::5148595861720802226::1716275677::1716275677::1::::<><>::
+Green.png::CompressedTexture2D::6723545576775865185::1716275677::1716275677::1::::<><>::
+Pink.png::CompressedTexture2D::8208349421141569501::1716275677::1716275677::1::::<><>::
+Purple.png::CompressedTexture2D::8762939609317202935::1716275677::1716275677::1::::<><>::
+Yellow.png::CompressedTexture2D::8946742924545206565::1716275677::1716275677::1::::<><>::
+::res://characters/::1716729473
+Chick.tscn::PackedScene::2976246440969986161::1716329495::0::1::::<><>::
+::res://characters/character_scenes/::1716930276
+Chick.gd::GDScript::-1::1716329495::0::1::::<>Area2D<>::
+Chick.tscn::PackedScene::7806444087257848336::1716330833::0::1::::<><>::res://characters/character_scenes/Chick.gd<>uid://2jmh1g2jhx86::::res://characters/character_textures/placeholder_character/Leg Up, Beak Right.png<>uid://drapa406wtgjc::::res://characters/character_textures/placeholder_character/Legs Down, Beak Right.png
+placeholder_character.gd::GDScript::-1::1716330388::0::1::::<>CharacterBody2D<>::
+placeholder_character.tscn::PackedScene::2359780275775933932::1716502061::0::1::::<><>::res://characters/character_scenes/placeholder_character.gd<>uid://23fay6exosx8::::res://characters/character_scenes/spritesheet (1).png<>uid://b2hr6lmv6xo2s::::res://characters/character_scenes/spritesheet (3).png
+spritesheet (1).png::CompressedTexture2D::1953206248966770071::1716321953::1716321953::1::::<><>::
+spritesheet (2).png::CompressedTexture2D::2321638345668364731::1716321953::1716321953::1::::<><>::
+spritesheet (3).png::CompressedTexture2D::4297058251977471528::1716321953::1716321953::1::::<><>::
+spritesheet (5).png::CompressedTexture2D::9167712994306898104::1716930276::1716930276::1::::<><>::
+spritesheet.png::CompressedTexture2D::9180474307057135486::1716321953::1716321953::1::::<><>::
+::res://characters/character_textures/::1716321953
+::res://characters/character_textures/placeholder_character/::1716321953
+Double Jump (32x32).png::CompressedTexture2D::1620642794380123711::1716321953::1716321953::1::::<><>::
+Fall (32x32).png::CompressedTexture2D::7429043904338627614::1716321953::1716321953::1::::<><>::
+Hit (32x32).png::CompressedTexture2D::936691413420556163::1716321953::1716321953::1::::<><>::
+Idle (32x32).png::CompressedTexture2D::3609385657679073816::1716321953::1716321953::1::::<><>::
+Jump (32x32).png::CompressedTexture2D::5389715570120198130::1716321953::1716321953::1::::<><>::
+Leg Up, Beak Left.png::CompressedTexture2D::2160839594960521244::1716321953::1716321953::1::::<><>::
+Leg Up, Beak Right.png::CompressedTexture2D::1914420658598960773::1716321953::1716321953::1::::<><>::
+Legs Down, Beak Left.png::CompressedTexture2D::5120111823358356952::1716321953::1716321953::1::::<><>::
+Legs Down, Beak Right.png::CompressedTexture2D::8353384711053266788::1716321953::1716321953::1::::<><>::
+pixil-frame-0.png::CompressedTexture2D::6332884874077174914::1716321953::1716321953::1::::<><>::
+Run (32x32).png::CompressedTexture2D::865169613568093316::1716321953::1716321953::1::::<><>::
+Wall Jump (32x32).png::CompressedTexture2D::308702048870134176::1716321953::1716321953::1::::<><>::
+::res://scenes/::1716929090
+0.main.tscn::PackedScene::7232739945307272693::1716330833::0::1::::<><>::
+1.truck_scene.tscn::PackedScene::5368686654165594856::1716502061::0::1::::<><>::uid://cm65d0fdefry8::::res://backgrounds/inside truck pixel.png<>uid://laa2oboh1koj::::res://terrain/Terrain (16x16).png<>uid://8vdibio3twlg::::res://characters/character_scenes/placeholder_character.tscn<>res://scenes/transition_to_chase_scn.gd
+2.chase_scene.tscn::PackedScene::31016007493263673::1716929090::0::1::::<><>::uid://dh62x0wptmwpk::::res://backgrounds/truck chase.jpg<>uid://laa2oboh1koj::::res://terrain/Terrain (16x16).png<>uid://8vdibio3twlg::::res://characters/character_scenes/placeholder_character.tscn<>res://scenes/transition_to_caterpillar.gd<>uid://dujxtopyek40g::::res://backgrounds/Background assets/shitty cardboard box.png
+3.caterpillar_scene.tscn::PackedScene::917842139522564746::1716502061::0::1::::<><>::uid://bkv2ev4xuiom2::::res://backgrounds/pixelated background 1.png<>uid://laa2oboh1koj::::res://terrain/Terrain (16x16).png<>uid://8vdibio3twlg::::res://characters/character_scenes/placeholder_character.tscn<>res://scenes/transition_to_city.gd
+4.city_scene.tscn::PackedScene::5815524697443884229::1716329495::0::1::::<><>::uid://68gmran1wor2::::res://backgrounds/flower pot pixelated.png<>uid://laa2oboh1koj::::res://terrain/Terrain (16x16).png<>uid://8vdibio3twlg::::res://characters/character_scenes/placeholder_character.tscn
+5.flower_pot.tscn::PackedScene::7291099428120206605::1716502061::0::1::::<><>::uid://dkjrt333gv3f0::::res://scenes/flower pot pixelated.png<>uid://laa2oboh1koj::::res://terrain/Terrain (16x16).png<>uid://8vdibio3twlg::::res://characters/character_scenes/placeholder_character.tscn
+flower pot pixelated.png::CompressedTexture2D::7880797521396783419::1716329495::1716329495::1::::<><>::
+transition_to_caterpillar.gd::GDScript::-1::1716275677::0::1::::<>Area2D<>::
+transition_to_chase_scn.gd::GDScript::-1::1716275677::0::1::::<>Area2D<>::
+transition_to_city.gd::GDScript::-1::1716329495::0::1::::<>Area2D<>::
+::res://terrain/::1716275683
+Terrain (16x16).png::CompressedTexture2D::772126233971979085::1716275677::1716275677::1::::<><>::
