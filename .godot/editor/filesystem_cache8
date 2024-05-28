@@ -20,7 +20,7 @@ Purple.png::CompressedTexture2D::8762939609317202935::1716275677::1716275677::1:
 Yellow.png::CompressedTexture2D::8946742924545206565::1716275677::1716275677::1::::<><>::
 ::res://characters/::1716729473
 Chick.tscn::PackedScene::2976246440969986161::1716329495::0::1::::<><>::
-::res://characters/character_scenes/::1716930276
+::res://characters/character_scenes/::1716930715
 Chick.gd::GDScript::-1::1716329495::0::1::::<>Area2D<>::
 Chick.tscn::PackedScene::7806444087257848336::1716330833::0::1::::<><>::res://characters/character_scenes/Chick.gd<>uid://2jmh1g2jhx86::::res://characters/character_textures/placeholder_character/Leg Up, Beak Right.png<>uid://drapa406wtgjc::::res://characters/character_textures/placeholder_character/Legs Down, Beak Right.png
 placeholder_character.gd::GDScript::-1::1716330388::0::1::::<>CharacterBody2D<>::
@@ -28,7 +28,9 @@ placeholder_character.tscn::PackedScene::2359780275775933932::1716502061::0::1::
 spritesheet (1).png::CompressedTexture2D::1953206248966770071::1716321953::1716321953::1::::<><>::
 spritesheet (2).png::CompressedTexture2D::2321638345668364731::1716321953::1716321953::1::::<><>::
 spritesheet (3).png::CompressedTexture2D::4297058251977471528::1716321953::1716321953::1::::<><>::
-spritesheet (5).png::CompressedTexture2D::9167712994306898104::1716930276::1716930276::1::::<><>::
+spritesheet (5).png::CompressedTexture2D::9167712994306898104::1716930608::1716930276::1::::<><>::
+spritesheet (6).png::CompressedTexture2D::5940343727968726037::1716930642::1716930642::1::::<><>::
+spritesheet (7).png::CompressedTexture2D::4941935573723146871::1716930715::1716930715::1::::<><>::
 spritesheet.png::CompressedTexture2D::9180474307057135486::1716321953::1716321953::1::::<><>::
 ::res://characters/character_textures/::1716321953
 ::res://characters/character_textures/placeholder_character/::1716321953
