@@ -7,7 +7,16 @@ const JUMP_VELOCITY = -400.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var isDragging = false;
+var pushforce = 80;
+var inertia = 100;
 
+#func _input(event):
+	#if event is InputEventMouseButton:
+		#if event.is_pressed() and event.button_index == BUTTON_LEFT:
+			#is_dragging = true
+		#else:
+			#is_dragging = false
 
 func _physics_process(delta):
 	if (velocity.x > 1 || velocity.x < -1):
@@ -31,6 +40,20 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	#for i in get_slide_collision_count():
+		#var collision = get_slide_collision(i)
+		#if collision.get_collider.is_in_group("movable-object"):
+			#collision.collider.apply_central_impulse(-collision.normal + inertia)
+		#
 	
 	var isLeft = velocity.x < 0
 	sprite_2d.flip_h = isLeft
+	
+	#if is_dragging:
+		#var input_vec = Input.get_action_strength("ui_mouse") * Vector2(1, -1)
+		#var mouse_ray = get_viewport().get_camera().project_ray_origin(get_local_mouse_position())
+		#var new_pos = mouse_ray.get_origin() + mouse_ray.get_direction() * 2
+		#var new_transform = Transform(Basis(), new_pos)
+		#set_transform(new_transform)
+		#move_and_slide(Vector3(), Vector3.UP)
+	

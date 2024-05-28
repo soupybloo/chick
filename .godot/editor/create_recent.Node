@@ -1,8 +1,9 @@
-Camera2D
+Sprite2D
 CollisionShape2D
+RigidBody2D
+Camera2D
 Area2D
 AnimatedSprite2D
-Sprite2D
 AudioStreamPlayer2D
 CharacterBody2D
 TileMap
