@@ -8,7 +8,7 @@ const JUMP_VELOCITY = -400.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var isDragging = false;
-var pushforce = 80;
+var push_force = 80;
 var inertia = 100;
 
 #func _input(event):
@@ -40,20 +40,26 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+<<<<<<< HEAD
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		# if collision and collision.get_collider() is RigidBody2D: 
+		#if collision and collision.get_collider().is_in_group("movable_object"):
+		if collision and collision.get_collider() is RigidBody2D: 
+			collision.get_collider().apply_central_impulse(-collision.get_normal() * push_force)
+			print(collision.get_normal() )
+			print("hello")
+		
+=======
 	#for i in get_slide_collision_count():
 		#var collision = get_slide_collision(i)
 		#if collision.get_collider.is_in_group("movable-object"):
 			#collision.collider.apply_central_impulse(-collision.normal + inertia)
 		#
-	
+
+>>>>>>> 7165632db35688707a13aaf3d2b4b4e1c9372a8f
 	var isLeft = velocity.x < 0
 	sprite_2d.flip_h = isLeft
-	
+
 	#if is_dragging:
 		#var input_vec = Input.get_action_strength("ui_mouse") * Vector2(1, -1)
-		#var mouse_ray = get_viewport().get_camera().project_ray_origin(get_local_mouse_position())
-		#var new_pos = mouse_ray.get_origin() + mouse_ray.get_direction() * 2
-		#var new_transform = Transform(Basis(), new_pos)
-		#set_transform(new_transform)
-		#move_and_slide(Vector3(), Vector3.UP)
-	

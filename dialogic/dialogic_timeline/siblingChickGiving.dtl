@@ -1,0 +1,12 @@
+join Sibling_Chick 1
+Hello... um...
+I'm chuck.
+And I found this is the cave...
+Not sure what it does...
+I'm leaving town today and if you could research it then that would be great!
+Could you?
+- yes... of course
+	thanks! it means the world and I will see you when I return from the island!
+	[signal arg="exit_chuck"]
+- nope... sorry!
+	I understand
