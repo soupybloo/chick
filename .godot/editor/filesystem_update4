@@ -4,3 +4,6 @@ res://scenes/2.chase_scene.tscn
 res://scenes/3.caterpillar_scene.tscn
 res://scenes/5.flower_pot.tscn
 res://characters/character_scenes/Chick.tscn
+res://characters/character_scenes/placeholder_character.gd
+res://scenes/5.flower_pot.gd
+res://scenes/Flower.gd
