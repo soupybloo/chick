@@ -7,3 +7,7 @@ res://characters/character_scenes/Chick.tscn
 res://characters/character_scenes/placeholder_character.gd
 res://scenes/5.flower_pot.gd
 res://scenes/Flower.gd
+res://characters/character_scenes/Chick.gd
+res://scenes/transition_to_caterpillar.gd
+res://scenes/transition_to_chase_scn.gd
+res://scenes/transition_to_city.gd

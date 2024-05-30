@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://uu2o0jbu8vk6"]
+
+[ext_resource type="Script" path="res://characters/character_scenes/inside_truck_placeholder_character.gd" id="1_glnuk"]
+[ext_resource type="Texture2D" uid="uid://ci123ffoj668m" path="res://characters/character_textures/placeholder_character/Jump (32x32).png" id="1_jvaxb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtjru"]
+size = Vector2(21, 26)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6rrlv"]
+radius = 35.3475
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(209, 394)
+scale = Vector2(3, 3)
+script = ExtResource("1_glnuk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_jvaxb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 2)
+shape = SubResource("RectangleShape2D_vtjru")
+
+[node name="chatDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chatDetection"]
+shape = SubResource("CircleShape2D_6rrlv")
+
+[connection signal="body_entered" from="chatDetection" to="." method="_on_chat_detection_body_entered"]
+[connection signal="body_shape_exited" from="chatDetection" to="." method="_on_chat_detection_body_shape_exited"]
