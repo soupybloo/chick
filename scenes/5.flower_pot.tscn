@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://db44lv0i3pcef"]
+[gd_scene load_steps=12 format=3 uid="uid://db44lv0i3pcef"]
 
 [ext_resource type="Texture2D" uid="uid://dkjrt333gv3f0" path="res://scenes/flower pot pixelated.png" id="1_gh0ov"]
 [ext_resource type="Texture2D" uid="uid://laa2oboh1koj" path="res://terrain/Terrain (16x16).png" id="2_gn68g"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://damr6kbe3yf3b" path="res://scenes/Group 25.png" id="5_jhp8p"]
 [ext_resource type="Texture2D" uid="uid://fvphwqcdyxyw" path="res://scenes/Group 26.png" id="6_8hpu1"]
 [ext_resource type="Script" path="res://scenes/Flower.gd" id="6_8t2ek"]
+[ext_resource type="Script" path="res://characters/character_scenes/flowerpotchick.gd" id="8_lx0x6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ddin"]
 texture = ExtResource("2_gn68g")
@@ -525,6 +526,7 @@ shape = SubResource("CapsuleShape2D_be40h")
 
 [node name="Player" parent="." instance=ExtResource("3_gddgl")]
 position = Vector2(-122, 541)
+script = ExtResource("8_lx0x6")
 
 [connection signal="body_entered" from="Flower" to="Flower" method="_on_body_entered"]
 [connection signal="body_exited" from="Flower" to="Flower" method="_on_body_exited"]
