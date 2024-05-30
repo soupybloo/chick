@@ -7,6 +7,6 @@ I'm leaving town today and if you could research it then that would be great!
 Could you?
 - yes... of course
 	thanks! it means the world and I will see you when I return from the island!
-	[signal arg="exit_chuck"]
+	[signal arg="exit_chick"]
 - nope... sorry!
 	I understand

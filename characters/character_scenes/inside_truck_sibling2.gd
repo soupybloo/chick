@@ -13,13 +13,29 @@ func _process(delta):
 	if player_in_area:
 		if Input.is_action_just_pressed("e"):
 			#run dialogue
-				run_dialogue("siblingChickGiving")
+			run_rando_dialogue()
 				
 func run_dialogue(dialogue_string):
 	is_chatting = true
 	is_roaming = false
 	
 	Dialogic.start(dialogue_string)
+	
+func run_rando_dialogue():
+	Dialogic.timeline_ended.connect(ended_dialogue)
+	####
+	is_chatting = true
+	is_roaming = false
+	
+	var dialogue_line = randi_range(1,2)
+	Dialogic.start("siblingChick2Random" + str(dialogue_line))
+	####
+	
+func ended_dialogue():
+	Dialogic.timeline_ended.disconnect(ended_dialogue)
+	is_chatting = false
+	is_roaming = true
+	
 	
 func DialogicSignal(arg: String):
 	if arg == "exit_chick":
