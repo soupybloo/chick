@@ -1,14 +1,6 @@
-res://characters/dialogic_characters/Sibling_Chick.dch
-res://dialogic/dialogic_timeline/siblingChickGiving.dtl
 res://scenes/inside_truck.tscn
-res://scenes/1.truck_scene.tscn
-res://scenes/2.chase_scene.tscn
-res://characters/character_scenes/placeholder_character.tscn
-res://scenes/3.caterpillar_scene.tscn
-res://scenes/5.flower_pot.tscn
-res://characters/character_scenes/Chick.tscn
-res://dialogic/dialogic_characters/Sibling_Chick.dch
-res://characters/character_scenes/inside_truck_placeholder_character.gd
 res://characters/character_scenes/inside_truck_placeholder.tscn
 res://characters/character_scenes/inside_truck_character.tscn
-res://characters/character_scenes/placeholder_character.gd
+res://characters/character_scenes/placeholder_character.tscn
+res://characters/character_scenes/inside_truck_placeholder.gd
+res://characters/character_scenes/inside_truck_character.gd
