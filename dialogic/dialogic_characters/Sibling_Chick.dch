@@ -17,7 +17,7 @@
 "portraits": {
 "New portrait": {
 "export_overrides": {
-"image": "\"res://characters/character_textures/placeholder_character/Jump (32x32).png\""
+"image": "\"res://characters/character_textures/mama.png\""
 },
 "mirror": false,
 "offset": Vector2(0, -130),

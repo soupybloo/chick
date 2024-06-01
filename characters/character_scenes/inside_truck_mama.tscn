@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=3 uid="uid://bg2141yai8fvg"]
+
+[ext_resource type="Texture2D" uid="uid://dovxtc6ws3rhn" path="res://characters/character_textures/mama_spritesheet.png" id="1_aw6n1"]
+[ext_resource type="Script" path="res://characters/character_scenes/inside_truck_mama.gd" id="1_kmsot"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0ulw"]
+atlas = ExtResource("1_aw6n1")
+region = Rect2(0, 0, 906, 1018)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h255e"]
+atlas = ExtResource("1_aw6n1")
+region = Rect2(906, 0, 906, 1018)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xo546"]
+atlas = ExtResource("1_aw6n1")
+region = Rect2(0, 0, 906, 1018)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8jqlx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0ulw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h255e")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xo546")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o642o"]
+size = Vector2(168.5, 200)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vyqdc"]
+radius = 200.01
+
+[node name="mama" type="CharacterBody2D"]
+script = ExtResource("1_kmsot")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1.5, 5.00001)
+scale = Vector2(0.184327, 0.188605)
+sprite_frames = SubResource("SpriteFrames_8jqlx")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.25, 6)
+shape = SubResource("RectangleShape2D_o642o")
+
+[node name="chatDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chatDetection"]
+shape = SubResource("CircleShape2D_vyqdc")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="body_entered" from="chatDetection" to="." method="_on_chat_detection_body_entered"]
+[connection signal="body_exited" from="chatDetection" to="." method="_on_chat_detection_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
