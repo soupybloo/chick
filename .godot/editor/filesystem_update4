@@ -1,7 +1,7 @@
 res://scenes/inside_truck.tscn
-res://dialogic/dialogic_characters/Sibling_Chick.dch
+res://dialogic/dialogic_characters/Sibling_Chick2.dch
 res://characters/character_scenes/inside_truck_placeholder.tscn
-res://characters/character_scenes/inside_truck_character.tscn
-res://characters/character_scenes/inside_truck_sibling2.tscn
 res://characters/character_scenes/inside_truck_mama.tscn
+res://characters/character_scenes/inside_truck_sibling_1.tscn
+res://characters/character_scenes/inside_truck_sibling_1.gd
 res://characters/character_scenes/inside_truck_mama.gd

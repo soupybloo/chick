@@ -31,8 +31,7 @@ func _process(delta):
 	if current_state == 0 or current_state == 1:
 		$AnimatedSprite2D.play("idle")
 	elif current_state == 2 and !is_chatting:
-		if dir.x == -1 or dir.x == 1 or dir.y == -1 or dir.y == 1:
-			$AnimatedSprite2D.play("walking")
+		$AnimatedSprite2D.play("walking")
 	
 	if is_roaming:
 		match current_state:
@@ -46,13 +45,15 @@ func _process(delta):
 	if player_in_chat_zone:
 		if Input.is_action_just_pressed("e") and can_start_dialogue and !is_chatting:
 			print("E pressed, starting dialogue")
-			_start_dialogue("siblingChickGiving")
+			_start_dialogue()
 			is_roaming = false
 			is_chatting = true
 			$AnimatedSprite2D.play("idle")
 
-func _start_dialogue(dialogue_string) -> void:
-	var dialog = Dialogic.start(dialogue_string)
+func _start_dialogue() -> void:
+	var dialogue_line = str(randi_range(1, 2))
+	print("Starting dialogue: siblingChick2Random" + dialogue_line)
+	var dialog = Dialogic.start("siblingChick2Random" + dialogue_line)
 	add_child(dialog)
 	dialog.visible = true
 	Dialogic.timeline_ended.connect(ended_dialogue)
@@ -83,15 +84,14 @@ func _on_chat_detection_body_entered(body: Node) -> void:
 	if body.has_method("player"):
 		player = body
 		player_in_chat_zone = true
+		print("Player entered chat zone")
 
 func _on_chat_detection_body_exited(body: Node) -> void:
 	if body.has_method("player"):
 		player_in_chat_zone = false
+		print("Player exited chat zone")
 
 func _on_timer_timeout() -> void:
 	$Timer.wait_time = choose([0.5, 1, 1.5])
 	current_state = choose([IDLE, NEW_DIR, MOVE])
-
-
 	
-
