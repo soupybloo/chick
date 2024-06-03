@@ -80,7 +80,9 @@ func choose(array) -> Variant:
 
 func move(delta: float) -> void:
 	if not is_chatting:
-		position += dir * speed * delta
+		velocity = dir * speed
+		move_and_slide()
+		#position += dir * speed * delta
 		
 func check_boundaries() -> void:
 	if position.x < start_pos.x - boundary_size:

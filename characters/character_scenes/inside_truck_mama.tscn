@@ -51,6 +51,7 @@ position = Vector2(-1.5, 5.00001)
 scale = Vector2(0.184327, 0.188605)
 sprite_frames = SubResource("SpriteFrames_8jqlx")
 animation = &"idle"
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8, 35)

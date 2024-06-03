@@ -51,6 +51,7 @@ position = Vector2(0, 5.96046e-08)
 scale = Vector2(0.115155, 0.117605)
 sprite_frames = SubResource("SpriteFrames_1dcwi")
 animation = &"walking"
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4, 11)

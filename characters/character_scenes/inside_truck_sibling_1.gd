@@ -95,7 +95,8 @@ func check_boundaries() -> void:
 
 func move(delta: float) -> void:
 	if not is_chatting:
-		position += dir * speed * delta
+		velocity = dir * speed
+		move_and_slide()
 
 func _on_chat_detection_body_entered(body: Node) -> void:
 	if body.has_method("player"):
