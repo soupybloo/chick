@@ -1,15 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://yogv430pp5pf"]
+[gd_scene load_steps=10 format=3 uid="uid://yogv430pp5pf"]
 
 [ext_resource type="Texture2D" uid="uid://bhe7qip1ptf5j" path="res://characters/character_textures/sibling1_spritesheet.png" id="1_3w5or"]
 [ext_resource type="Script" path="res://characters/character_scenes/inside_truck_sibling_1.gd" id="1_84oi0"]
+[ext_resource type="Texture2D" uid="uid://8omvucxltksf" path="res://characters/character_textures/sibling1_spritesheet_update.png" id="2_adnle"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fv5uw"]
-atlas = ExtResource("1_3w5or")
-region = Rect2(0, 0, 728, 726)
+[sub_resource type="AtlasTexture" id="AtlasTexture_j88r3"]
+atlas = ExtResource("2_adnle")
+region = Rect2(1245, 0, 1245, 1161)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h0dlk"]
-atlas = ExtResource("1_3w5or")
-region = Rect2(728, 0, 728, 726)
+[sub_resource type="AtlasTexture" id="AtlasTexture_eev23"]
+atlas = ExtResource("2_adnle")
+region = Rect2(0, 0, 1245, 1161)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f76ce"]
 atlas = ExtResource("1_3w5or")
@@ -19,10 +20,10 @@ region = Rect2(0, 0, 728, 726)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fv5uw")
+"texture": SubResource("AtlasTexture_j88r3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h0dlk")
+"texture": SubResource("AtlasTexture_eev23")
 }],
 "loop": true,
 "name": &"idle",
@@ -50,10 +51,11 @@ script = ExtResource("1_84oi0")
 position = Vector2(0, 5.96046e-08)
 scale = Vector2(0.115155, 0.117605)
 sprite_frames = SubResource("SpriteFrames_1dcwi")
-animation = &"walking"
+animation = &"idle"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(4, 11)
 scale = Vector2(1, 1.01934)
 shape = SubResource("CircleShape2D_twcjl")
@@ -61,6 +63,7 @@ shape = SubResource("CircleShape2D_twcjl")
 [node name="chatDetection" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chatDetection"]
+visible = false
 shape = SubResource("CircleShape2D_jtt5k")
 
 [node name="Timer" type="Timer" parent="."]

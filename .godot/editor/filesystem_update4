@@ -7,3 +7,7 @@ res://characters/character_scenes/inside_truck_sibling_1.gd
 res://characters/character_scenes/inside_truck_mama.gd
 res://dialogic/dialogic_characters/Sibling_Chick.dch
 res://characters/character_scenes/inside_truck_character.tscn
+res://assets/inside_truck/egg.tscn
+res://assets/inside_truck/chicken_coop.tscn
+res://assets/inside_truck/chicken_feed.tscn
+res://assets/inside_truck/chicken_water.tscn

@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://fas3c6u7houh"]
+
+[ext_resource type="Texture2D" uid="uid://cacq4qrn7icqv" path="res://assets/inside_truck/chicken_water.png" id="1_psjdu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qaswe"]
+atlas = ExtResource("1_psjdu")
+region = Rect2(0, 0, 518, 481)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1bgv4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qaswe")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8d8x4"]
+size = Vector2(153, 219.5)
+
+[node name="chicken_water" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-3.00002, 1)
+scale = Vector2(0.53668, 0.531705)
+sprite_frames = SubResource("SpriteFrames_1bgv4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-10.5, 23.75)
+shape = SubResource("RectangleShape2D_8d8x4")
