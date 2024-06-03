@@ -37,8 +37,8 @@ animations = [{
 "speed": 1.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o642o"]
-size = Vector2(168.5, 200)
+[sub_resource type="CircleShape2D" id="CircleShape2D_tldaa"]
+radius = 70.0071
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vyqdc"]
 radius = 200.01
@@ -53,8 +53,8 @@ sprite_frames = SubResource("SpriteFrames_8jqlx")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1.25, 6)
-shape = SubResource("RectangleShape2D_o642o")
+position = Vector2(8, 35)
+shape = SubResource("CircleShape2D_tldaa")
 
 [node name="chatDetection" type="Area2D" parent="."]
 

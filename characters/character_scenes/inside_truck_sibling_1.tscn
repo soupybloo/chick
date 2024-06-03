@@ -37,8 +37,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ngsf6"]
-size = Vector2(84, 86.3302)
+[sub_resource type="CircleShape2D" id="CircleShape2D_twcjl"]
+radius = 33.0146
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jtt5k"]
 radius = 129.035
@@ -53,9 +53,9 @@ sprite_frames = SubResource("SpriteFrames_1dcwi")
 animation = &"walking"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 1.43051e-06)
+position = Vector2(4, 11)
 scale = Vector2(1, 1.01934)
-shape = SubResource("RectangleShape2D_ngsf6")
+shape = SubResource("CircleShape2D_twcjl")
 
 [node name="chatDetection" type="Area2D" parent="."]
 

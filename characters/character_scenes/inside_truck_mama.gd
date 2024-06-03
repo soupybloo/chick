@@ -15,6 +15,8 @@ var player_in_chat_zone = false
 var can_start_dialogue = true
 var dialogue_timeout = 0.5 # Half a second delay
 
+const boundary_size = 20
+
 enum {
 	IDLE,
 	NEW_DIR,
@@ -42,6 +44,7 @@ func _process(delta):
 				dir = choose([Vector2.RIGHT, Vector2.UP, Vector2.LEFT, Vector2.DOWN])
 			MOVE:
 				move(delta)
+				check_boundaries()
 	
 	if player_in_chat_zone:
 		if Input.is_action_just_pressed("e") and can_start_dialogue and !is_chatting:
@@ -78,6 +81,20 @@ func choose(array) -> Variant:
 func move(delta: float) -> void:
 	if not is_chatting:
 		position += dir * speed * delta
+		
+func check_boundaries() -> void:
+	if position.x < start_pos.x - boundary_size:
+		position.x = start_pos.x - boundary_size
+		current_state = NEW_DIR
+	elif position.x > start_pos.x + boundary_size:
+		position.x = start_pos.x + boundary_size
+		current_state = NEW_DIR
+	if position.y < start_pos.y - boundary_size:
+		position.y = start_pos.y - boundary_size
+		current_state = NEW_DIR
+	elif position.y > start_pos.y + boundary_size:
+		position.y = start_pos.y + boundary_size
+		current_state = NEW_DIR
 
 func _on_chat_detection_body_entered(body: Node) -> void:
 	if body.has_method("player"):
