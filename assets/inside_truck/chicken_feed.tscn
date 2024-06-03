@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3xb8xi8q0ywn"]
+[gd_scene load_steps=7 format=3 uid="uid://d3xb8xi8q0ywn"]
 
 [ext_resource type="Texture2D" uid="uid://ctjbfp8w44tuw" path="res://assets/inside_truck/chicken_feed.png" id="1_06jps"]
+[ext_resource type="Script" path="res://assets/inside_truck/chicken_feed.gd" id="1_jroax"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tchod"]
 atlas = ExtResource("1_06jps")
@@ -20,7 +21,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_twwwi"]
 size = Vector2(175, 247)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_svjbl"]
+radius = 174.026
+
 [node name="chicken_feed" type="Area2D"]
+script = ExtResource("1_jroax")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-4, 5)
@@ -31,3 +36,12 @@ sprite_frames = SubResource("SpriteFrames_5h8hw")
 visible = false
 position = Vector2(-0.5, 6.5)
 shape = SubResource("RectangleShape2D_twwwi")
+
+[node name="chatDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chatDetection"]
+position = Vector2(-1, 22)
+shape = SubResource("CircleShape2D_svjbl")
+
+[connection signal="body_entered" from="chatDetection" to="." method="_on_chat_detection_body_entered"]
+[connection signal="body_exited" from="chatDetection" to="." method="_on_chat_detection_body_exited"]

@@ -22,13 +22,19 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Chicken_Feed": "res://dialogic/dialogic_characters/Chicken_Feed.dch",
+"Flight_Poster": "res://dialogic/dialogic_characters/Flight_Poster.dch",
 "Sibling_Chick": "res://dialogic/dialogic_characters/Sibling_Chick.dch",
-"Sibling_Chick2": "res://dialogic/dialogic_characters/Sibling_Chick2.dch"
+"Sibling_Chick2": "res://dialogic/dialogic_characters/Sibling_Chick2.dch",
+"Stacked_Crates": "res://dialogic/dialogic_characters/Stacked_Crates.dch"
 }
 directories/dtl_directory={
+"chicken_feed_popup": "res://dialogic/dialogic_timeline/chicken_feed_popup.dtl",
+"flight_poster_popup": "res://dialogic/dialogic_timeline/flight_poster_popup.dtl",
 "siblingChick2Random1": "res://dialogic/dialogic_timeline/siblingChick2Random1.dtl",
 "siblingChick2Random2": "res://dialogic/dialogic_timeline/siblingChick2Random2.dtl",
-"siblingChickGiving": "res://dialogic/dialogic_timeline/siblingChickGiving.dtl"
+"siblingChickGiving": "res://dialogic/dialogic_timeline/siblingChickGiving.dtl",
+"stacked_crates_popup": "res://dialogic/dialogic_timeline/stacked_crates_popup.dtl"
 }
 
 [display]

@@ -11,3 +11,14 @@ res://assets/inside_truck/egg.tscn
 res://assets/inside_truck/chicken_coop.tscn
 res://assets/inside_truck/chicken_feed.tscn
 res://assets/inside_truck/chicken_water.tscn
+res://dialogic/dialogic_characters/Chicken_Feed.dch
+res://dialogic/dialogic_timeline/chicken_feed_popup.dtl
+res://assets/inside_truck/chicken_feed.gd
+res://assets/inside_truck/flight_poster.tscn
+res://dialogic/dialogic_characters/Flight_Poster.dch
+res://dialogic/dialogic_timeline/flight_poster_popup.dtl
+res://assets/inside_truck/flight_poster.gd
+res://assets/inside_truck/stacked_crates.tscn
+res://dialogic/dialogic_characters/Stacked_Crates.dch
+res://dialogic/dialogic_timeline/stacked_crates_popup.dtl
+res://assets/inside_truck/stacked_crates.gd

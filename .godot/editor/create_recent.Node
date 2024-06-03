@@ -1,6 +1,7 @@
 CollisionShape2D
-AnimatedSprite2D
 Area2D
+CollisionPolygon2D
+AnimatedSprite2D
 Node
 Timer
 CharacterBody2D
