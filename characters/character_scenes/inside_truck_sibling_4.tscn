@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cej1vbydf68bn"]
+[gd_scene load_steps=9 format=3 uid="uid://cej1vbydf68bn"]
 
 [ext_resource type="Texture2D" uid="uid://djvh5sunf5fcg" path="res://characters/character_textures/sibling4_spritesheet.png" id="1_gl0hx"]
+[ext_resource type="Script" path="res://characters/character_scenes/inside_truck_sibling_4.gd" id="1_y3ow6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ha5a8"]
 atlas = ExtResource("1_gl0hx")
@@ -37,26 +38,33 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mdpjj"]
-radius = 46.0
+radius = 38.0132
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tmugs"]
 radius = 88.0
 
 [node name="sibling4" type="CharacterBody2D"]
+script = ExtResource("1_y3ow6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1.00001, -3)
 scale = Vector2(0.1499, 0.157084)
 sprite_frames = SubResource("SpriteFrames_pu1ag")
 animation = &"idle"
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(7, 10)
+position = Vector2(-7, 3)
 shape = SubResource("CircleShape2D_mdpjj")
 
 [node name="chatDetection" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chatDetection"]
+position = Vector2(-10, -7)
 shape = SubResource("CircleShape2D_tmugs")
 
 [node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="chatDetection" to="." method="_on_chat_detection_body_entered"]
+[connection signal="body_exited" from="chatDetection" to="." method="_on_chat_detection_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

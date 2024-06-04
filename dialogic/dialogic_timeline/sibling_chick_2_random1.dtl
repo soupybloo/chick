@@ -1,2 +1,3 @@
 join Sibling_Chick_2 2
 something about flying
+[signal arg="exit_sibling2"]

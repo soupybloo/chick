@@ -8,12 +8,24 @@ var dialogue_timeout = 0.5 # Half a second delay
 
 const boundary_size = 20
 
+@onready var anim_tree : AnimationTree = $AnimationTree
+
+var is_shaking = false
+
 func _ready():
 	randomize()
 	Dialogic.signal_event.connect(DialogicSignal)
 	print("Dialogic signal connected")
+	#anim_tree.active = true
+	#anim_tree["parameters/conditions/is_shaking"] = true
+	$AnimatedSprite2D.play("default")
 
 func _process(delta):
+	#update_animation_parameters()
+	if InsideTruckGlobal.trigger_noise == true and is_shaking == false:
+		$AnimatedSprite2D.play("shake")
+		is_shaking == true
+	
 	if player_in_chat_zone:
 		if Input.is_action_just_pressed("e") and can_start_dialogue:
 			print("E pressed, starting dialogue")

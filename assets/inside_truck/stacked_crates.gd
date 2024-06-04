@@ -33,8 +33,9 @@ func ended_dialogue() -> void:
 	print("Dialogue ended")
 
 func DialogicSignal(arg: String) -> void:
-	if arg == "exit_chick":
+	if arg == "exit_stacked_crates":
 		print("signal received")
+		InsideTruckGlobal.stacked_crates_exit = true
 
 func choose(array) -> Variant:
 	array.shuffle()

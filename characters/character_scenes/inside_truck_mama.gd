@@ -15,6 +15,8 @@ var player_in_chat_zone = false
 var can_start_dialogue = true
 var dialogue_timeout = 0.5 # Half a second delay
 
+var trigger_once = false
+
 const boundary_size = 20
 
 enum {
@@ -30,6 +32,10 @@ func _ready():
 	print("Dialogic signal connected")
 
 func _process(delta):
+	if InsideTruckGlobal.trigger_noise == true and trigger_once == false:
+		trigger_once = true
+		print("i start the noise dialogue")
+		_start_dialogue("handle_noise")
 	if current_state == 0 or current_state == 1:
 		$AnimatedSprite2D.play("idle")
 	elif current_state == 2 and !is_chatting:
@@ -55,6 +61,7 @@ func _process(delta):
 			$AnimatedSprite2D.play("idle")
 
 func _start_dialogue(dialogue_string) -> void:
+	print(dialogue_string)
 	var dialog = Dialogic.start(dialogue_string)
 	add_child(dialog)
 	dialog.visible = true
@@ -70,8 +77,9 @@ func ended_dialogue() -> void:
 	print("Dialogue ended")
 
 func DialogicSignal(arg: String) -> void:
-	if arg == "exit_chick":
+	if arg == "exit_mama":
 		print("signal received")
+		InsideTruckGlobal.mama_exit = true
 		# more code here, check tutorial like around 20 minutes
 
 func choose(array) -> Variant:

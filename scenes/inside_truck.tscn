@@ -1,6 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://dyf8fpw06noar"]
+[gd_scene load_steps=19 format=3 uid="uid://dyf8fpw06noar"]
 
 [ext_resource type="Texture2D" uid="uid://cn5cugnld0jxy" path="res://backgrounds/inside_truck_background_large.png" id="1_5q4k4"]
+[ext_resource type="Script" path="res://scenes/inside_truck_global.gd" id="1_b0jho"]
 [ext_resource type="Texture2D" uid="uid://laa2oboh1koj" path="res://terrain/Terrain (16x16).png" id="2_cp6ja"]
 [ext_resource type="PackedScene" uid="uid://cjf71o5yrpg4i" path="res://characters/character_scenes/inside_truck_character.tscn" id="2_e44iv"]
 [ext_resource type="PackedScene" uid="uid://dl0ubg8h4p88f" path="res://assets/inside_truck/chicken_coop.tscn" id="4_qgeha"]
@@ -465,6 +466,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_amdqg")
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_b0jho")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -504,7 +506,7 @@ position = Vector2(1700, 152)
 position = Vector2(285, 161)
 
 [node name="egg" parent="." instance=ExtResource("5_822c6")]
-position = Vector2(1557, 470)
+position = Vector2(1528, 519)
 
 [node name="chicken_water" parent="." instance=ExtResource("9_c4krk")]
 position = Vector2(778, 526)
@@ -516,10 +518,10 @@ position = Vector2(1036, 205)
 position = Vector2(1926, 431)
 
 [node name="truck_handle" parent="." instance=ExtResource("14_mhh06")]
-position = Vector2(-511, 364)
+position = Vector2(-529, 329)
 
 [node name="mama" parent="." instance=ExtResource("6_bukpj")]
-position = Vector2(1441, 468)
+position = Vector2(1354, 513)
 
 [node name="sibling1" parent="." instance=ExtResource("6_q7s8m")]
 position = Vector2(7, 586)
@@ -531,4 +533,4 @@ position = Vector2(589, 574)
 position = Vector2(-325, 224)
 
 [node name="sibling4" parent="." instance=ExtResource("15_gds4g")]
-position = Vector2(724, 278)
+position = Vector2(1542, 269)

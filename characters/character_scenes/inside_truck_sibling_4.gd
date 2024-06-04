@@ -55,8 +55,8 @@ func _process(delta):
 
 func _start_dialogue() -> void:
 	var dialogue_line = str(randi_range(1, 2))
-	print("Starting dialogue: sibling_chick_3_random1" + dialogue_line)
-	var dialog = Dialogic.start("sibling_chick_3_random1")
+	print("Starting dialogue: sibling_chick_4_random1" + dialogue_line)
+	var dialog = Dialogic.start("sibling_chick_4_random1")
 	#var dialog = Dialogic.start("siblingChick2Random" + dialogue_line)
 	add_child(dialog)
 	dialog.visible = true
@@ -72,9 +72,10 @@ func ended_dialogue() -> void:
 	print("Dialogue ended")
 
 func DialogicSignal(arg: String) -> void:
-	if arg == "exit_sibling3":
+	if arg == "exit_sibling4":
 		print("signal received")
-		InsideTruckGlobal.sibling3_exit = true
+		InsideTruckGlobal.sibling4_exit = true
+		# more code here, check tutorial like around 20 minutes
 
 func choose(array) -> Variant:
 	array.shuffle()
@@ -104,11 +105,11 @@ func _on_chat_detection_body_entered(body):
 		player = body
 		player_in_chat_zone = true
 		print("Player entered chat zone")
-
+		
 func _on_chat_detection_body_exited(body):
 	if body.has_method("player"):
 		player_in_chat_zone = false
-		
+
 func _on_timer_timeout():
 	$Timer.wait_time = choose([0.5, 1, 1.5])
 	current_state = choose([IDLE, NEW_DIR, MOVE])

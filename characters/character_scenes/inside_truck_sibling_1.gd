@@ -71,8 +71,9 @@ func ended_dialogue() -> void:
 	print("Dialogue ended")
 
 func DialogicSignal(arg: String) -> void:
-	if arg == "exit_chick":
+	if arg == "exit_sibling1":
 		print("signal received")
+		InsideTruckGlobal.sibling1_exit = true
 		# more code here, check tutorial like around 20 minutes
 
 func choose(array) -> Variant:

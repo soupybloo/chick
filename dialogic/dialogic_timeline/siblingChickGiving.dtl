@@ -2,7 +2,6 @@ join Sibling_Chick 2
 Hello dear! You chicks be quiet now, the eggs are sleeping.
 And stay away from the edge of the truck. You chicks worry me sick!
 - Okay mama!
-	<Empty Text Event>
-	[signal arg="exit_chick"]
+	[signal arg="exit_mama"]
 - ...
-	<Empty Text Event>
+	[signal arg="exit_mama"]
