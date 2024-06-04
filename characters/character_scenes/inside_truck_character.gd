@@ -36,7 +36,6 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	if Input.is_action_pressed("peck"):
-		print("pecking")
 		sprite_2d.animation = "peck"
 	
 
