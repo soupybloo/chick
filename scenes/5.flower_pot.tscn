@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://db44lv0i3pcef"]
+[gd_scene load_steps=14 format=3 uid="uid://db44lv0i3pcef"]
 
 [ext_resource type="Texture2D" uid="uid://dkjrt333gv3f0" path="res://scenes/flower pot pixelated.png" id="1_gh0ov"]
 [ext_resource type="Texture2D" uid="uid://laa2oboh1koj" path="res://terrain/Terrain (16x16).png" id="2_gn68g"]
@@ -8,6 +8,12 @@
 [ext_resource type="Texture2D" uid="uid://fvphwqcdyxyw" path="res://scenes/Group 26.png" id="6_8hpu1"]
 [ext_resource type="Script" path="res://scenes/Flower.gd" id="6_8t2ek"]
 [ext_resource type="Script" path="res://characters/character_scenes/flowerpotchick.gd" id="8_lx0x6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gy2gg"]
+size = Vector2(116, 776)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rmxjl"]
+size = Vector2(156.5, 766.5)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ddin"]
 texture = ExtResource("2_gn68g")
@@ -458,25 +464,34 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_3ddin")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_be40h"]
-radius = 90.0
-height = 180.0
+radius = 109.0
+height = 226.0
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(3, -21)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 2.0
-offset_top = 22.0
-offset_right = 1250.0
-offset_bottom = 790.0
+offset_left = -8.0
+offset_top = 27.0
+offset_right = 1240.0
+offset_bottom = 795.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(2307, 98)
 texture = ExtResource("1_gh0ov")
 expand_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect"]
+position = Vector2(56, 380)
+shape = SubResource("RectangleShape2D_gy2gg")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TextureRect"]
+position = Vector2(1174.75, 380.75)
+shape = SubResource("RectangleShape2D_rmxjl")
 
 [node name="TileMap" type="TileMap" parent="."]
 visible = false
@@ -495,7 +510,7 @@ scale = Vector2(1.72097, 1.43563)
 texture = ExtResource("4_m25b5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Flower"]
-position = Vector2(508, 601)
+position = Vector2(533, 588)
 shape = SubResource("CapsuleShape2D_be40h")
 
 [node name="Flower2" type="Area2D" parent="."]
@@ -508,7 +523,7 @@ scale = Vector2(1.54032, 1.17216)
 texture = ExtResource("5_jhp8p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Flower2"]
-position = Vector2(809, 613)
+position = Vector2(804, 625)
 shape = SubResource("CapsuleShape2D_be40h")
 
 [node name="Flower3" type="Area2D" parent="."]
