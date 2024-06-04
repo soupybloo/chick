@@ -30,12 +30,13 @@ func _ready():
 	start_pos = position
 	Dialogic.signal_event.connect(DialogicSignal)
 	print("Dialogic signal connected")
+	$truck_noise.play()
 
 func _process(delta):
 	if InsideTruckGlobal.trigger_noise == true and trigger_once == false:
 		trigger_once = true
 		print("i start the noise dialogue")
-		$AudioStreamPlayer2D.play()
+		$AudioStreamPlayer.play()
 		await get_tree().create_timer(3).timeout
 		_start_dialogue("handle_noise")
 	if current_state == 0 or current_state == 1:
