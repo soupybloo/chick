@@ -1,10 +1,7 @@
 extends Area2D
 
 func _on_body_entered(body):
-	
-	print(body, "flowerbody")
 	if body.name == "Player":
-		print("entered")
 		body.nearby_flower = self
 
 

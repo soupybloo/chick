@@ -10,11 +10,7 @@ var nearby_flower = null
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _input(event):
-	if event.is_action("peck"):
-		print("okay")
-		print(nearby_flower)
 	if event.is_action_pressed("peck") and nearby_flower:
-		print("done")
 		pluck_flower()
 
 func _physics_process(delta):
@@ -53,7 +49,6 @@ func pluck_flower():
 		nearby_flower = null
 		
 func _on_Area2D_body_entered(body):
-	print("body", body)
 	if body.name == "Flower":
 		nearby_flower = body
 
