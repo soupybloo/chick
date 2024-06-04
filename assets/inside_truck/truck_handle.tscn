@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://di4xvmva3yttv"]
+
+[ext_resource type="Texture2D" uid="uid://bt66lqj4ta7tg" path="res://assets/inside_truck/truck_handle.png" id="1_iiyyp"]
+[ext_resource type="Script" path="res://assets/inside_truck/truck_handle.gd" id="1_kti8e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82yq4"]
+atlas = ExtResource("1_iiyyp")
+region = Rect2(0, 0, 156, 59)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1ri36"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82yq4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pe0b8"]
+size = Vector2(57, 139)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jtxd7"]
+radius = 86.3713
+
+[node name="truck_handle" type="Area2D"]
+script = ExtResource("1_kti8e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = -1.35961
+sprite_frames = SubResource("SpriteFrames_1ri36")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -5.5)
+shape = SubResource("RectangleShape2D_pe0b8")
+
+[node name="chatDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chatDetection"]
+shape = SubResource("CircleShape2D_jtxd7")
+
+[connection signal="body_entered" from="chatDetection" to="." method="_on_chat_detection_body_entered"]
+[connection signal="body_exited" from="chatDetection" to="." method="_on_chat_detection_body_exited"]

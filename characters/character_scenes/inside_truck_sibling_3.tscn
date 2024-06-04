@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://bkv4si6naph8i"]
+
+[ext_resource type="Texture2D" uid="uid://gx3pr7ue36qw" path="res://characters/character_textures/sibling3_spritesheet.png" id="1_bi7ll"]
+[ext_resource type="Script" path="res://characters/character_scenes/inside_truck_sibling_3.gd" id="1_jpi6g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cam0m"]
+atlas = ExtResource("1_bi7ll")
+region = Rect2(0, 0, 1245, 1161)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qi6db"]
+atlas = ExtResource("1_bi7ll")
+region = Rect2(1245, 0, 1245, 1161)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_08h84"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cam0m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qi6db")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fttww"]
+radius = 30.0666
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dgbb0"]
+radius = 82.0061
+
+[node name="sibling3" type="CharacterBody2D"]
+script = ExtResource("1_jpi6g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, 0)
+scale = Vector2(0.10743, 0.123062)
+sprite_frames = SubResource("SpriteFrames_08h84")
+animation = &"idle"
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 14)
+shape = SubResource("CircleShape2D_fttww")
+
+[node name="chatDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chatDetection"]
+shape = SubResource("CircleShape2D_dgbb0")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="chatDetection" to="." method="_on_chat_detection_body_entered"]
+[connection signal="body_exited" from="chatDetection" to="." method="_on_chat_detection_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

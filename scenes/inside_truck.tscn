@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dyf8fpw06noar"]
+[gd_scene load_steps=18 format=3 uid="uid://dyf8fpw06noar"]
 
 [ext_resource type="Texture2D" uid="uid://cn5cugnld0jxy" path="res://backgrounds/inside_truck_background_large.png" id="1_5q4k4"]
 [ext_resource type="Texture2D" uid="uid://laa2oboh1koj" path="res://terrain/Terrain (16x16).png" id="2_cp6ja"]
@@ -11,6 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://fas3c6u7houh" path="res://assets/inside_truck/chicken_water.tscn" id="9_c4krk"]
 [ext_resource type="PackedScene" uid="uid://5dqmjkikr8to" path="res://assets/inside_truck/flight_poster.tscn" id="10_d2siy"]
 [ext_resource type="PackedScene" uid="uid://ddcbieglfhvd0" path="res://assets/inside_truck/stacked_crates.tscn" id="11_ion4h"]
+[ext_resource type="PackedScene" uid="uid://mtwa16uo4m1s" path="res://characters/character_scenes/inside_truck_sibling_2.tscn" id="12_y73x0"]
+[ext_resource type="PackedScene" uid="uid://bkv4si6naph8i" path="res://characters/character_scenes/inside_truck_sibling_3.tscn" id="13_gso7y"]
+[ext_resource type="PackedScene" uid="uid://di4xvmva3yttv" path="res://assets/inside_truck/truck_handle.tscn" id="14_mhh06"]
+[ext_resource type="PackedScene" uid="uid://cej1vbydf68bn" path="res://characters/character_scenes/inside_truck_sibling_4.tscn" id="15_gds4g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_amdqg"]
 texture = ExtResource("2_cp6ja")
@@ -508,11 +512,23 @@ position = Vector2(778, 526)
 [node name="flight_poster" parent="." instance=ExtResource("10_d2siy")]
 position = Vector2(1036, 205)
 
+[node name="stacked_crates" parent="." instance=ExtResource("11_ion4h")]
+position = Vector2(1926, 431)
+
+[node name="truck_handle" parent="." instance=ExtResource("14_mhh06")]
+position = Vector2(-511, 364)
+
 [node name="mama" parent="." instance=ExtResource("6_bukpj")]
 position = Vector2(1441, 468)
 
 [node name="sibling1" parent="." instance=ExtResource("6_q7s8m")]
 position = Vector2(7, 586)
 
-[node name="stacked_crates" parent="." instance=ExtResource("11_ion4h")]
-position = Vector2(1926, 431)
+[node name="sibling2" parent="." instance=ExtResource("12_y73x0")]
+position = Vector2(589, 574)
+
+[node name="sibling3" parent="." instance=ExtResource("13_gso7y")]
+position = Vector2(-325, 224)
+
+[node name="sibling4" parent="." instance=ExtResource("15_gds4g")]
+position = Vector2(724, 278)

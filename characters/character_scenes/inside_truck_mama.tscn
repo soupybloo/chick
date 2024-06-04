@@ -41,7 +41,7 @@ animations = [{
 radius = 70.0071
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vyqdc"]
-radius = 200.01
+radius = 164.003
 
 [node name="mama" type="CharacterBody2D"]
 script = ExtResource("1_kmsot")
@@ -54,14 +54,12 @@ animation = &"idle"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(8, 35)
 shape = SubResource("CircleShape2D_tldaa")
 
 [node name="chatDetection" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chatDetection"]
-visible = false
 shape = SubResource("CircleShape2D_vyqdc")
 
 [node name="Timer" type="Timer" parent="."]

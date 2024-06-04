@@ -42,7 +42,7 @@ animations = [{
 radius = 33.0146
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jtt5k"]
-radius = 129.035
+radius = 99.0454
 
 [node name="sibling1" type="CharacterBody2D"]
 script = ExtResource("1_84oi0")
@@ -55,7 +55,6 @@ animation = &"idle"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(4, 11)
 scale = Vector2(1, 1.01934)
 shape = SubResource("CircleShape2D_twcjl")
@@ -63,7 +62,6 @@ shape = SubResource("CircleShape2D_twcjl")
 [node name="chatDetection" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chatDetection"]
-visible = false
 shape = SubResource("CircleShape2D_jtt5k")
 
 [node name="Timer" type="Timer" parent="."]

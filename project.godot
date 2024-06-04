@@ -26,7 +26,10 @@ directories/dch_directory={
 "Flight_Poster": "res://dialogic/dialogic_characters/Flight_Poster.dch",
 "Sibling_Chick": "res://dialogic/dialogic_characters/Sibling_Chick.dch",
 "Sibling_Chick2": "res://dialogic/dialogic_characters/Sibling_Chick2.dch",
-"Stacked_Crates": "res://dialogic/dialogic_characters/Stacked_Crates.dch"
+"Sibling_Chick_2": "res://dialogic/dialogic_characters/Sibling_Chick_2.dch",
+"Sibling_Chick_3": "res://dialogic/dialogic_characters/Sibling_Chick_3.dch",
+"Stacked_Crates": "res://dialogic/dialogic_characters/Stacked_Crates.dch",
+"Truck_Handle": "res://dialogic/dialogic_characters/Truck_Handle.dch"
 }
 directories/dtl_directory={
 "chicken_feed_popup": "res://dialogic/dialogic_timeline/chicken_feed_popup.dtl",
@@ -34,7 +37,10 @@ directories/dtl_directory={
 "siblingChick2Random1": "res://dialogic/dialogic_timeline/siblingChick2Random1.dtl",
 "siblingChick2Random2": "res://dialogic/dialogic_timeline/siblingChick2Random2.dtl",
 "siblingChickGiving": "res://dialogic/dialogic_timeline/siblingChickGiving.dtl",
-"stacked_crates_popup": "res://dialogic/dialogic_timeline/stacked_crates_popup.dtl"
+"sibling_chick_2_random1": "res://dialogic/dialogic_timeline/sibling_chick_2_random1.dtl",
+"sibling_chick_3_random1": "res://dialogic/dialogic_timeline/sibling_chick_3_random1.dtl",
+"stacked_crates_popup": "res://dialogic/dialogic_timeline/stacked_crates_popup.dtl",
+"truck_handle_popup": "res://dialogic/dialogic_timeline/truck_handle_popup.dtl"
 }
 
 [display]

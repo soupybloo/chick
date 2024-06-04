@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://cej1vbydf68bn"]
+
+[ext_resource type="Texture2D" uid="uid://djvh5sunf5fcg" path="res://characters/character_textures/sibling4_spritesheet.png" id="1_gl0hx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ha5a8"]
+atlas = ExtResource("1_gl0hx")
+region = Rect2(1245, 0, 1245, 1161)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q28cd"]
+atlas = ExtResource("1_gl0hx")
+region = Rect2(0, 0, 1245, 1161)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mbv7"]
+atlas = ExtResource("1_gl0hx")
+region = Rect2(1245, 0, 1245, 1161)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pu1ag"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ha5a8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q28cd")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mbv7")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mdpjj"]
+radius = 46.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tmugs"]
+radius = 88.0
+
+[node name="sibling4" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1.00001, -3)
+scale = Vector2(0.1499, 0.157084)
+sprite_frames = SubResource("SpriteFrames_pu1ag")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7, 10)
+shape = SubResource("CircleShape2D_mdpjj")
+
+[node name="chatDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chatDetection"]
+shape = SubResource("CircleShape2D_tmugs")
+
+[node name="Timer" type="Timer" parent="."]
