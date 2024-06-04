@@ -46,7 +46,7 @@ func _process(delta):
 				check_boundaries()
 	
 	if player_in_chat_zone:
-		if Input.is_action_just_pressed("e") and can_start_dialogue and !is_chatting:
+		if Input.is_action_just_pressed("peck") and can_start_dialogue and !is_chatting:
 			print("E pressed, starting dialogue")
 			_start_dialogue()
 			is_roaming = false

@@ -15,7 +15,7 @@ func _ready():
 
 func _process(delta):
 	if player_in_chat_zone:
-		if Input.is_action_just_pressed("e") and can_start_dialogue:
+		if Input.is_action_just_pressed("peck") and can_start_dialogue:
 			print("E pressed, starting dialogue")
 			_start_dialogue("chicken_feed_popup")
 

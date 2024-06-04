@@ -29,11 +29,11 @@ func _process(delta):
 		is_shaking == true
 	
 	if player_in_chat_zone:
-		if Input.is_action_just_pressed("e") and can_start_dialogue and InsideTruckGlobal.trigger_noise == false:
+		if Input.is_action_just_pressed("peck") and can_start_dialogue and InsideTruckGlobal.trigger_noise == false:
 			print("E pressed, starting dialogue")
 			_start_dialogue("truck_handle_popup")
 			#$AudioStreamPlayer2D.play()
-		if Input.is_action_just_pressed("e") and InsideTruckGlobal.trigger_noise ==true:
+		if Input.is_action_just_pressed("peck") and InsideTruckGlobal.trigger_noise ==true:
 			print("E pressed, starting transition")
 			_start_dialogue("uh_oh_popup")
 			#InsideTruckGlobal.trigger_fall = true

@@ -7,3 +7,12 @@ res://characters/character_scenes/inside_truck_transition_screen.tscn
 res://scenes/practice_pickup.tscn
 res://characters/character_scenes/practice_pickup_human.tscn
 res://characters/character_scenes/inside_truck_character.gd
+res://assets/inside_truck/chicken_feed.gd
+res://characters/character_scenes/inside_truck_mama.gd
+res://characters/character_scenes/inside_truck_sibling_1.gd
+res://characters/character_scenes/inside_truck_sibling_2.gd
+res://characters/character_scenes/inside_truck_sibling_3.gd
+res://characters/character_scenes/inside_truck_sibling_4.gd
+res://assets/inside_truck/stacked_crates.gd
+res://assets/inside_truck/truck_handle.gd
+res://assets/inside_truck/flight_poster.gd
