@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://ddcbieglfhvd0"]
+
+[ext_resource type="Texture2D" uid="uid://bbpj3v8a8ic4a" path="res://assets/inside_truck/stacked_crates.png" id="1_00hsq"]
+[ext_resource type="Script" path="res://assets/inside_truck/stacked_crates.gd" id="1_d2mn1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1xa7"]
+atlas = ExtResource("1_00hsq")
+region = Rect2(0, 0, 355, 702)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q3e2w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1xa7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uph18"]
+size = Vector2(190, 416)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_urcol"]
+radius = 250.072
+
+[node name="stacked_crates" type="Area2D"]
+script = ExtResource("1_d2mn1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, -0.999992)
+scale = Vector2(0.67588, 0.638177)
+sprite_frames = SubResource("SpriteFrames_q3e2w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(11, -9)
+shape = SubResource("RectangleShape2D_uph18")
+
+[node name="chatDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chatDetection"]
+position = Vector2(49, 2)
+shape = SubResource("CircleShape2D_urcol")
+
+[connection signal="body_entered" from="chatDetection" to="." method="_on_chat_detection_body_entered"]
+[connection signal="body_exited" from="chatDetection" to="." method="_on_chat_detection_body_exited"]

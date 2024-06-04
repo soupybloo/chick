@@ -1,12 +1,7 @@
-join Sibling_Chick 1
-Hello... um...
-I'm chuck.
-And I found this is the cave...
-Not sure what it does...
-I'm leaving town today and if you could research it then that would be great!
-Could you?
-- yes... of course
-	thanks! it means the world and I will see you when I return from the island!
-	[signal arg="exit_chuck"]
-- nope... sorry!
-	I understand
+join Sibling_Chick 2
+Hello dear! You chicks be quiet now, the eggs are sleeping.
+And stay away from the edge of the truck. You chicks worry me sick!
+- Okay mama!
+	[signal arg="exit_mama"]
+- ...
+	[signal arg="exit_mama"]

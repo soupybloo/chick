@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://htvu7b4upe1u"]
+
+[ext_resource type="Texture2D" uid="uid://geqq5rwdow75" path="res://characters/character_textures/mama.png" id="1_kam0m"]
+[ext_resource type="Texture2D" uid="uid://dsmyxr7uelv5g" path="res://assets/inside_truck/eggs.png" id="2_swx10"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y30ro"]
+size = Vector2(310.5, 217)
+
+[node name="Human" type="CharacterBody2D"]
+
+[node name="human_spr" type="Sprite2D" parent="."]
+position = Vector2(243, 305)
+scale = Vector2(0.502304, 0.520629)
+texture = ExtResource("1_kam0m")
+
+[node name="item_spr" type="Sprite2D" parent="."]
+position = Vector2(683, 456)
+scale = Vector2(0.604377, 0.62234)
+texture = ExtResource("2_swx10")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(281.75, 334)
+shape = SubResource("RectangleShape2D_y30ro")

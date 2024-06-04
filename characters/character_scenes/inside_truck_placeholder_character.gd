@@ -4,6 +4,11 @@ var is_roaming = true
 var is_chatting = false
 var player_in_area = false
 
+func _ready():
+	#print("null")
+	randomize()
+	Dialogic.signal_event.connect(DialogicSignal)
+
 func _process(delta):
 	if player_in_area:
 		if Input.is_action_just_pressed("e"):
@@ -15,6 +20,11 @@ func run_dialogue(dialogue_string):
 	is_roaming = false
 	
 	Dialogic.start(dialogue_string)
+	
+func DialogicSignal(arg: String):
+	if arg == "exit_chick":
+		print("signal received")
+		# more code here, check tutorial like around 20 minutes
 
 func _on_chat_detection_body_entered(body):
 	if body.has_method("player"):

@@ -1,0 +1,201 @@
+[gd_scene load_steps=20 format=3 uid="uid://di4xvmva3yttv"]
+
+[ext_resource type="Script" path="res://assets/inside_truck/truck_handle.gd" id="1_kti8e"]
+[ext_resource type="Texture2D" uid="uid://35e36ec75m2n" path="res://assets/inside_truck/truck_handle_spritesheet.png" id="3_3usix"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvfaw"]
+atlas = ExtResource("3_3usix")
+region = Rect2(2233, 0, 2233, 1009)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ge3u"]
+atlas = ExtResource("3_3usix")
+region = Rect2(4466, 0, 2233, 1009)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1in3k"]
+atlas = ExtResource("3_3usix")
+region = Rect2(6699, 0, 2233, 1009)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1780"]
+atlas = ExtResource("3_3usix")
+region = Rect2(0, 0, 2233, 1009)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12d16"]
+atlas = ExtResource("3_3usix")
+region = Rect2(2233, 0, 2233, 1009)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1ri36"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvfaw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ge3u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1in3k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1780")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12d16")
+}],
+"loop": true,
+"name": &"shake",
+"speed": 8.0
+}]
+
+[sub_resource type="Animation" id="Animation_fcno2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_b6ue0"]
+resource_name = "default"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_euuq3"]
+resource_name = "shake"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"shake"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x54cq"]
+_data = {
+"RESET": SubResource("Animation_fcno2"),
+"default": SubResource("Animation_b6ue0"),
+"shake": SubResource("Animation_euuq3")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wdqkr"]
+animation = &"default"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ost07"]
+animation = &"shake"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_a8ew1"]
+advance_mode = 2
+advance_condition = &"is_default"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8jwlc"]
+advance_condition = &"is_shaking"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_0c8fn"]
+states/default/node = SubResource("AnimationNodeAnimation_wdqkr")
+states/default/position = Vector2(346.5, 84.0938)
+states/shake/node = SubResource("AnimationNodeAnimation_ost07")
+states/shake/position = Vector2(529, 83.8125)
+transitions = ["Start", "default", SubResource("AnimationNodeStateMachineTransition_a8ew1"), "default", "shake", SubResource("AnimationNodeStateMachineTransition_8jwlc")]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pe0b8"]
+size = Vector2(57, 139)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jtxd7"]
+radius = 86.3713
+
+[node name="truck_handle" type="Area2D"]
+script = ExtResource("1_kti8e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(4.11299, -11.3443)
+rotation = -1.35961
+scale = Vector2(0.0793542, 0.0681123)
+sprite_frames = SubResource("SpriteFrames_1ri36")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_x54cq")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_0c8fn")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/is_default = false
+parameters/conditions/is_shaking = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -5.5)
+shape = SubResource("RectangleShape2D_pe0b8")
+
+[node name="chatDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chatDetection"]
+shape = SubResource("CircleShape2D_jtxd7")
+
+[connection signal="body_entered" from="chatDetection" to="." method="_on_chat_detection_body_entered"]
+[connection signal="body_exited" from="chatDetection" to="." method="_on_chat_detection_body_exited"]

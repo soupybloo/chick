@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ca5a7in3bltq"]
+
+[ext_resource type="PackedScene" uid="uid://htvu7b4upe1u" path="res://characters/character_scenes/practice_pickup_human.tscn" id="1_k4h6y"]
+
+[node name="PracticePickup" type="Node2D"]
+
+[node name="Human" parent="." instance=ExtResource("1_k4h6y")]

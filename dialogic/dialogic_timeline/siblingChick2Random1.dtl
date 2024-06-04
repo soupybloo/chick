@@ -1,0 +1,3 @@
+join Sibling_Chick2 2
+Are we there yet? I can't wait until we make it to the farm.
+[signal arg="exit_sibling1"]

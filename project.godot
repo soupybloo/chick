@@ -15,10 +15,85 @@ run/main_scene="res://Scenes/1.truck_scene.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+InsideTruckGlobal="*res://scenes/inside_truck_global.gd"
+
+[dialogic]
+
+directories/dch_directory={
+"Chicken_Feed": "res://dialogic/dialogic_characters/Chicken_Feed.dch",
+"Flight_Poster": "res://dialogic/dialogic_characters/Flight_Poster.dch",
+"Sibling_Chick": "res://dialogic/dialogic_characters/Sibling_Chick.dch",
+"Sibling_Chick2": "res://dialogic/dialogic_characters/Sibling_Chick2.dch",
+"Sibling_Chick_2": "res://dialogic/dialogic_characters/Sibling_Chick_2.dch",
+"Sibling_Chick_3": "res://dialogic/dialogic_characters/Sibling_Chick_3.dch",
+"Sibling_Chick_4": "res://dialogic/dialogic_characters/Sibling_Chick_4.dch",
+"Stacked_Crates": "res://dialogic/dialogic_characters/Stacked_Crates.dch",
+"Truck_Handle": "res://dialogic/dialogic_characters/Truck_Handle.dch"
+}
+directories/dtl_directory={
+"chicken_feed_popup": "res://dialogic/dialogic_timeline/chicken_feed_popup.dtl",
+"flight_poster_popup": "res://dialogic/dialogic_timeline/flight_poster_popup.dtl",
+"handle_noise": "res://dialogic/dialogic_timeline/handle_noise.dtl",
+"siblingChick2Random1": "res://dialogic/dialogic_timeline/siblingChick2Random1.dtl",
+"siblingChick2Random2": "res://dialogic/dialogic_timeline/siblingChick2Random2.dtl",
+"siblingChickGiving": "res://dialogic/dialogic_timeline/siblingChickGiving.dtl",
+"sibling_chick_2_random1": "res://dialogic/dialogic_timeline/sibling_chick_2_random1.dtl",
+"sibling_chick_3_random1": "res://dialogic/dialogic_timeline/sibling_chick_3_random1.dtl",
+"sibling_chick_4_random1": "res://dialogic/dialogic_timeline/sibling_chick_4_random1.dtl",
+"stacked_crates_popup": "res://dialogic/dialogic_timeline/stacked_crates_popup.dtl",
+"truck_handle_popup": "res://dialogic/dialogic_timeline/truck_handle_popup.dtl",
+"uh_oh_popup": "res://dialogic/dialogic_timeline/uh_oh_popup.dtl"
+}
+
+[display]
+
+window/stretch/mode="viewport"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+
 [input]
 
+right={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194321,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
+left={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194319,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
+down={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194322,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
+up={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194320,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
+dialogic_default_action={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194309,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":88,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+e={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
 peck={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":80,"key_label":0,"unicode":112,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":80,"key_label":0,"unicode":0,"echo":false,"script":null)
 ]
 }
