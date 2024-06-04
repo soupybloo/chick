@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dyf8fpw06noar"]
+[gd_scene load_steps=20 format=3 uid="uid://dyf8fpw06noar"]
 
 [ext_resource type="Texture2D" uid="uid://cn5cugnld0jxy" path="res://backgrounds/inside_truck_background_large.png" id="1_5q4k4"]
 [ext_resource type="Script" path="res://scenes/inside_truck_global.gd" id="1_b0jho"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bkv4si6naph8i" path="res://characters/character_scenes/inside_truck_sibling_3.tscn" id="13_gso7y"]
 [ext_resource type="PackedScene" uid="uid://di4xvmva3yttv" path="res://assets/inside_truck/truck_handle.tscn" id="14_mhh06"]
 [ext_resource type="PackedScene" uid="uid://cej1vbydf68bn" path="res://characters/character_scenes/inside_truck_sibling_4.tscn" id="15_gds4g"]
+[ext_resource type="PackedScene" uid="uid://brm50ao0wacok" path="res://characters/character_scenes/inside_truck_transition_screen.tscn" id="17_d2r64"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_amdqg"]
 texture = ExtResource("2_cp6ja")
@@ -534,3 +535,5 @@ position = Vector2(-325, 224)
 
 [node name="sibling4" parent="." instance=ExtResource("15_gds4g")]
 position = Vector2(1542, 269)
+
+[node name="TransitionScreen" parent="." instance=ExtResource("17_d2r64")]

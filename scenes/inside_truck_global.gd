@@ -10,6 +10,7 @@ var flight_poster_exit = false
 var stacked_crates_exit = false
 
 var trigger_noise = false
+var trigger_fall = false
 
 func _process(delta):
 	if mama_exit == true and sibling1_exit == true and sibling2_exit == true and sibling3_exit == true and sibling4_exit == true and chicken_feed_exit == true and flight_poster_exit == true and stacked_crates_exit == true:

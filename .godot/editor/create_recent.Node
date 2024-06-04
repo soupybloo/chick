@@ -1,8 +1,10 @@
+AnimationPlayer
+ColorRect
+CanvasLayer
 AudioStreamPlayer
 AudioStreamPlayer2D
 Sprite2D
 AnimationTree
-AnimationPlayer
 Node2D
 Timer
 CollisionShape2D
@@ -10,5 +12,3 @@ Area2D
 AnimatedSprite2D
 CharacterBody2D
 CollisionPolygon2D
-Node
-Camera2D

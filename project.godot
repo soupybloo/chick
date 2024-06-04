@@ -44,7 +44,8 @@ directories/dtl_directory={
 "sibling_chick_3_random1": "res://dialogic/dialogic_timeline/sibling_chick_3_random1.dtl",
 "sibling_chick_4_random1": "res://dialogic/dialogic_timeline/sibling_chick_4_random1.dtl",
 "stacked_crates_popup": "res://dialogic/dialogic_timeline/stacked_crates_popup.dtl",
-"truck_handle_popup": "res://dialogic/dialogic_timeline/truck_handle_popup.dtl"
+"truck_handle_popup": "res://dialogic/dialogic_timeline/truck_handle_popup.dtl",
+"uh_oh_popup": "res://dialogic/dialogic_timeline/uh_oh_popup.dtl"
 }
 
 [display]

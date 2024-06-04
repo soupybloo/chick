@@ -33,6 +33,11 @@ func _process(delta):
 			print("E pressed, starting dialogue")
 			_start_dialogue("truck_handle_popup")
 			#$AudioStreamPlayer2D.play()
+		if Input.is_action_just_pressed("e") and InsideTruckGlobal.trigger_noise ==true:
+			print("E pressed, starting transition")
+			_start_dialogue("uh_oh_popup")
+			#InsideTruckGlobal.trigger_fall = true
+			
 
 func _start_dialogue(dialogue_string) -> void:
 	var dialog = Dialogic.start(dialogue_string)
@@ -45,6 +50,8 @@ func _start_dialogue(dialogue_string) -> void:
 
 func ended_dialogue() -> void:
 	Dialogic.timeline_ended.disconnect(ended_dialogue)
+	if InsideTruckGlobal.trigger_noise == true:
+		InsideTruckGlobal.trigger_fall = true
 	print("Dialogue ended")
 
 func DialogicSignal(arg: String) -> void:
