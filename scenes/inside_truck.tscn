@@ -507,7 +507,7 @@ position = Vector2(1700, 152)
 position = Vector2(285, 161)
 
 [node name="egg" parent="." instance=ExtResource("5_822c6")]
-position = Vector2(1528, 519)
+position = Vector2(1459, 514)
 
 [node name="chicken_water" parent="." instance=ExtResource("9_c4krk")]
 position = Vector2(778, 526)
@@ -522,7 +522,7 @@ position = Vector2(1926, 431)
 position = Vector2(-529, 329)
 
 [node name="mama" parent="." instance=ExtResource("6_bukpj")]
-position = Vector2(1354, 513)
+position = Vector2(1306, 515)
 
 [node name="sibling1" parent="." instance=ExtResource("6_q7s8m")]
 position = Vector2(7, 586)
@@ -534,6 +534,6 @@ position = Vector2(589, 574)
 position = Vector2(-325, 224)
 
 [node name="sibling4" parent="." instance=ExtResource("15_gds4g")]
-position = Vector2(1542, 269)
+position = Vector2(1606, 274)
 
 [node name="TransitionScreen" parent="." instance=ExtResource("17_d2r64")]

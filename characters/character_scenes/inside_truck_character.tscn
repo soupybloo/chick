@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cjf71o5yrpg4i"]
+[gd_scene load_steps=17 format=3 uid="uid://cjf71o5yrpg4i"]
 
 [ext_resource type="Script" path="res://characters/character_scenes/inside_truck_character.gd" id="1_5ulwv"]
 [ext_resource type="Texture2D" uid="uid://ccn57se7mq4b8" path="res://characters/character_scenes/spritesheet (7).png" id="2_mct07"]
@@ -20,10 +20,6 @@ region = Rect2(1294, 0, 647, 647)
 [sub_resource type="AtlasTexture" id="AtlasTexture_knypo"]
 atlas = ExtResource("2_mct07")
 region = Rect2(1941, 0, 647, 647)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6ygxl"]
-atlas = ExtResource("3_dh2q2")
-region = Rect2(0, 0, 647, 647)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0kav7"]
 atlas = ExtResource("3_dh2q2")
@@ -70,9 +66,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6ygxl")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_0kav7")
 }, {
 "duration": 1.0,
@@ -80,7 +73,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"peck",
-"speed": 5.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.6,
@@ -114,7 +107,7 @@ scale = Vector2(0.5, 0.521)
 sprite_frames = SubResource("SpriteFrames_wdy5u")
 animation = &"peck"
 autoplay = "defaultBob"
-frame = 2
+frame = 1
 frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
