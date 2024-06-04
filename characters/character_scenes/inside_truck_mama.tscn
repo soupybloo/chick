@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bg2141yai8fvg"]
+[gd_scene load_steps=10 format=3 uid="uid://bg2141yai8fvg"]
 
 [ext_resource type="Texture2D" uid="uid://dovxtc6ws3rhn" path="res://characters/character_textures/mama_spritesheet.png" id="1_aw6n1"]
 [ext_resource type="Script" path="res://characters/character_scenes/inside_truck_mama.gd" id="1_kmsot"]
+[ext_resource type="AudioStream" uid="uid://dsgq2ara7v435" path="res://audio/rattle_noise.mp3" id="3_a07co"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n0ulw"]
 atlas = ExtResource("1_aw6n1")
@@ -64,6 +65,9 @@ shape = SubResource("CircleShape2D_vyqdc")
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_a07co")
 
 [connection signal="body_entered" from="chatDetection" to="." method="_on_chat_detection_body_entered"]
 [connection signal="body_exited" from="chatDetection" to="." method="_on_chat_detection_body_exited"]

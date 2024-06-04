@@ -19,17 +19,20 @@ func _ready():
 	#anim_tree.active = true
 	#anim_tree["parameters/conditions/is_shaking"] = true
 	$AnimatedSprite2D.play("default")
+	#$AudioStreamPlayer2D.play()
 
 func _process(delta):
 	#update_animation_parameters()
 	if InsideTruckGlobal.trigger_noise == true and is_shaking == false:
+		#$AudioStreamPlayer2D.play()
 		$AnimatedSprite2D.play("shake")
 		is_shaking == true
 	
 	if player_in_chat_zone:
-		if Input.is_action_just_pressed("e") and can_start_dialogue:
+		if Input.is_action_just_pressed("e") and can_start_dialogue and InsideTruckGlobal.trigger_noise == false:
 			print("E pressed, starting dialogue")
 			_start_dialogue("truck_handle_popup")
+			#$AudioStreamPlayer2D.play()
 
 func _start_dialogue(dialogue_string) -> void:
 	var dialog = Dialogic.start(dialogue_string)
