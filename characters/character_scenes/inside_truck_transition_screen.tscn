@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://brm50ao0wacok"]
+[gd_scene load_steps=7 format=3 uid="uid://brm50ao0wacok"]
 
 [ext_resource type="Script" path="res://characters/character_scenes/inside_truck_transition_screen.gd" id="1_whoep"]
+[ext_resource type="VideoStream" path="res://chick.ogv" id="2_e85qc"]
+[ext_resource type="Script" path="res://characters/character_scenes/transitionToDia.gd" id="3_uq8o8"]
 
 [sub_resource type="Animation" id="Animation_txihs"]
 length = 0.001
@@ -52,3 +54,12 @@ color = Color(1, 1, 1, 0)
 libraries = {
 "": SubResource("AnimationLibrary_t0cc3")
 }
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 1164.0
+offset_bottom = 684.0
+stream = ExtResource("2_e85qc")
+expand = true
+script = ExtResource("3_uq8o8")
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
