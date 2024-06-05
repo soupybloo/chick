@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://d02vdipfxr35e"]
+
+[ext_resource type="PackedScene" uid="uid://c8f58qcp7ec1q" path="res://test-chick.tscn" id="1_jdvba"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hebly"]
+size = Vector2(20, 9.92822)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_26geu"]
+
+[node name="World" type="Node2D"]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(2086, 1447)
+scale = Vector2(211.505, 69.6582)
+shape = SubResource("RectangleShape2D_hebly")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(3758, 810)
+scale = Vector2(36.973, 26.0667)
+shape = SubResource("RectangleShape2D_26geu")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_jdvba")]
+position = Vector2(766, 485)

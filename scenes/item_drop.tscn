@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bow5a47sxb50t"]
+
+[ext_resource type="Texture2D" path="res://scenes/CANDY WRAPPER.png" id="1_fnb2h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vsqsx"]
+size = Vector2(121, 61)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="item_drop" type="Area2D" parent="." groups=["item_drop"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="item_drop"]
+position = Vector2(690.288, 539.743)
+shape = SubResource("RectangleShape2D_vsqsx")
+
+[node name="candy" type="Sprite2D" parent="item_drop/CollisionShape2D"]
+position = Vector2(1.5, -3.5)
+scale = Vector2(0.214627, 0.153645)
+texture = ExtResource("1_fnb2h")
