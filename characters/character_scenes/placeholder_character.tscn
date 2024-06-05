@@ -1,10 +1,9 @@
-[gd_scene load_steps=22 format=3 uid="uid://8vdibio3twlg"]
+[gd_scene load_steps=17 format=3 uid="uid://8vdibio3twlg"]
 
 [ext_resource type="Script" path="res://characters/character_scenes/placeholder_character.gd" id="1_wbdfx"]
 [ext_resource type="Texture2D" uid="uid://ccn57se7mq4b8" path="res://characters/character_scenes/spritesheet (7).png" id="2_c53ni"]
 [ext_resource type="Texture2D" uid="uid://bx2urb1cn7drx" path="res://characters/character_scenes/spritesheet (9).png" id="3_fkk1l"]
 [ext_resource type="Texture2D" uid="uid://d3u55m86ks5we" path="res://characters/character_scenes/spritesheet (5).png" id="3_xlj07"]
-[ext_resource type="Texture2D" uid="uid://c63i7pwfobmc4" path="res://characters/character_scenes/spritesheet (10).png" id="4_300o1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ak88c"]
 atlas = ExtResource("2_c53ni")
@@ -29,22 +28,6 @@ region = Rect2(647, 0, 647, 647)
 [sub_resource type="AtlasTexture" id="AtlasTexture_y35gx"]
 atlas = ExtResource("3_fkk1l")
 region = Rect2(0, 0, 647, 647)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hpro4"]
-atlas = ExtResource("4_300o1")
-region = Rect2(0, 0, 647, 647)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7j2b2"]
-atlas = ExtResource("4_300o1")
-region = Rect2(647, 0, 647, 647)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lwyxs"]
-atlas = ExtResource("4_300o1")
-region = Rect2(1294, 0, 647, 647)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3sf0m"]
-atlas = ExtResource("4_300o1")
-region = Rect2(1941, 0, 647, 647)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_08vxr"]
 atlas = ExtResource("3_xlj07")
@@ -93,23 +76,6 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hpro4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7j2b2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lwyxs")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3sf0m")
-}],
-"loop": true,
-"name": &"jump",
-"speed": 6.0
-}, {
-"frames": [{
 "duration": 1.6,
 "texture": SubResource("AtlasTexture_08vxr")
 }, {
@@ -140,6 +106,7 @@ scale = Vector2(0.481, 0.5)
 sprite_frames = SubResource("SpriteFrames_wdy5u")
 animation = &"explorePeck"
 autoplay = "defaultBob"
+frame_progress = 0.996862
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(256, -44)
