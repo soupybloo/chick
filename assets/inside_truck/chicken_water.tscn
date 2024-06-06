@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://fas3c6u7houh"]
+[gd_scene load_steps=6 format=3 uid="uid://fas3c6u7houh"]
 
 [ext_resource type="Texture2D" uid="uid://cacq4qrn7icqv" path="res://assets/inside_truck/chicken_water.png" id="1_psjdu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mcbs7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qaswe"]
 atlas = ExtResource("1_psjdu")
@@ -23,6 +25,7 @@ size = Vector2(153, 219.5)
 [node name="chicken_water" type="Area2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_mcbs7")
 position = Vector2(-3.00002, 1)
 scale = Vector2(0.53668, 0.531705)
 sprite_frames = SubResource("SpriteFrames_1bgv4")

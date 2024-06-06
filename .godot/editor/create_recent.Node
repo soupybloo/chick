@@ -1,6 +1,7 @@
-VideoStreamPlayer
 CollisionShape2D
 Sprite2D
+Area2D
+VideoStreamPlayer
 CharacterBody2D
 ColorRect
 CanvasLayer
@@ -10,5 +11,4 @@ AudioStreamPlayer2D
 AnimationTree
 Node2D
 Timer
-Area2D
 AnimatedSprite2D

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://wqvkeacsy77n"]
+
+[ext_resource type="Texture2D" uid="uid://cmx400qbm5x4x" path="res://assets/inside_truck/Black.png" id="1_oy5p8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7k02e"]
+
+[node name="black" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_oy5p8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7k02e")
