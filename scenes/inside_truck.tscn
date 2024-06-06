@@ -513,7 +513,7 @@ position = Vector2(1459, 514)
 position = Vector2(778, 526)
 
 [node name="flight_poster" parent="." instance=ExtResource("10_d2siy")]
-position = Vector2(1036, 205)
+position = Vector2(1034, 208)
 
 [node name="stacked_crates" parent="." instance=ExtResource("11_ion4h")]
 position = Vector2(1926, 431)

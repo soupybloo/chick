@@ -29,7 +29,7 @@ func _ready():
 	Dialogic.signal_event.connect(DialogicSignal)
 	print("Dialogic signal connected")
 	$AnimatedSprite2D.material.set_shader_parameter("line_color", Color(1.0, 1.0, 1.0, 0.0))
-	$AnimatedSprite2D.material.set_shader_parameter("line_thickness", 20.0)
+	$AnimatedSprite2D.material.set_shader_parameter("line_thickness", 22.0)
 
 func _process(delta):
 	if current_state == 0 or current_state == 1:

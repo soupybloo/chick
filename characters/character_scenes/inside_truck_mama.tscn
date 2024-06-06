@@ -1,9 +1,15 @@
-[gd_scene load_steps=11 format=3 uid="uid://bg2141yai8fvg"]
+[gd_scene load_steps=13 format=3 uid="uid://bg2141yai8fvg"]
 
 [ext_resource type="Texture2D" uid="uid://dovxtc6ws3rhn" path="res://characters/character_textures/mama_spritesheet.png" id="1_aw6n1"]
 [ext_resource type="Script" path="res://characters/character_scenes/inside_truck_mama.gd" id="1_kmsot"]
+[ext_resource type="Shader" path="res://materials/inside_truck/inside_truck_sibling1.gdshader" id="2_np54r"]
 [ext_resource type="AudioStream" uid="uid://dsgq2ara7v435" path="res://audio/rattle_noise.mp3" id="3_a07co"]
 [ext_resource type="AudioStream" uid="uid://ca0tbol042ka7" path="res://audio/truck_noise.mp3" id="4_ssrb7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ddh5a"]
+shader = ExtResource("2_np54r")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 1.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n0ulw"]
 atlas = ExtResource("1_aw6n1")
@@ -49,6 +55,7 @@ radius = 164.003
 script = ExtResource("1_kmsot")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_ddh5a")
 position = Vector2(-1.5, 5.00001)
 scale = Vector2(0.184327, 0.188605)
 sprite_frames = SubResource("SpriteFrames_8jqlx")

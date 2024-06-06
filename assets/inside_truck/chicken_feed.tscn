@@ -1,7 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3xb8xi8q0ywn"]
+[gd_scene load_steps=9 format=3 uid="uid://d3xb8xi8q0ywn"]
 
 [ext_resource type="Texture2D" uid="uid://ctjbfp8w44tuw" path="res://assets/inside_truck/chicken_feed.png" id="1_06jps"]
 [ext_resource type="Script" path="res://assets/inside_truck/chicken_feed.gd" id="1_jroax"]
+[ext_resource type="Shader" path="res://materials/inside_truck/inside_truck_sibling1.gdshader" id="2_ejetv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hvnjs"]
+shader = ExtResource("2_ejetv")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 1.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tchod"]
 atlas = ExtResource("1_06jps")
@@ -28,6 +34,7 @@ radius = 174.026
 script = ExtResource("1_jroax")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_hvnjs")
 position = Vector2(-4, 5)
 scale = Vector2(0.52, 0.516)
 sprite_frames = SubResource("SpriteFrames_5h8hw")
