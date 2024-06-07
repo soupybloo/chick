@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtja6q0gjpdkw"]
+
+[ext_resource type="PackedScene" uid="uid://fcx3kq6qqjpm" path="res://characters/character_scenes/caterpillar.tscn" id="1_xfb5m"]
+
+[node name="EndingScenePtOne" type="Node2D"]
+
+[node name="Caterpillar" parent="." instance=ExtResource("1_xfb5m")]

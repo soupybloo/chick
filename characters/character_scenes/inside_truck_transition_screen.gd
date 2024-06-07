@@ -15,5 +15,5 @@ func transition():
 
 
 func _on_video_stream_player_finished():
-	pass
+	get_tree().change_scene_to_file("res://scenes/3.caterpillar_scene.tscn")
 	# something something load video.

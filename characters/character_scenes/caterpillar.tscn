@@ -1,0 +1,62 @@
+[gd_scene load_steps=10 format=3 uid="uid://fcx3kq6qqjpm"]
+
+[ext_resource type="Texture2D" path="res://scenes/pixil-frame-0 (20).png" id="1_7y3su"]
+[ext_resource type="Script" path="res://characters/character_scenes/caterpillar.gd" id="2_pyspl"]
+[ext_resource type="Texture2D" path="res://characters/character_scenes/spritesheet (11).png" id="3_at2lk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ct53f"]
+radius = 15.311
+height = 38.4406
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3o4dy"]
+atlas = ExtResource("3_at2lk")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqo06"]
+atlas = ExtResource("3_at2lk")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4l63"]
+atlas = ExtResource("3_at2lk")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l527h"]
+atlas = ExtResource("3_at2lk")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qqiwo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3o4dy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqo06")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4l63")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l527h")
+}],
+"loop": true,
+"name": &"catMove",
+"speed": 2.0
+}]
+
+[node name="Caterpillar" type="Sprite2D"]
+position = Vector2(498, 278)
+scale = Vector2(11.03, 10.46)
+texture = ExtResource("1_7y3su")
+script = ExtResource("2_pyspl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-21.3962, 23.2314)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_ct53f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(814, 237)
+scale = Vector2(6.885, 7.2)
+sprite_frames = SubResource("SpriteFrames_qqiwo")
+animation = &"catMove"

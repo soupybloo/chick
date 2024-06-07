@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://cbg54ds3l6cyg"]
+[gd_scene load_steps=9 format=3 uid="uid://cxi0lqxx5h07h"]
 
-[ext_resource type="Texture2D" uid="uid://cx58ygu6sckpi" path="res://characters/character_textures/rat-spritesheet.png" id="1_lo7ea"]
+[ext_resource type="Texture2D" path="res://characters/character_textures/rat-spritesheet.png" id="1_lo7ea"]
 [ext_resource type="Script" path="res://characters/character_scenes/rat_character.gd" id="2_mllj2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xikxt"]
