@@ -31,6 +31,9 @@ func _ready():
 	Dialogic.signal_event.connect(DialogicSignal)
 	print("Dialogic signal connected")
 	$truck_noise.play()
+	$AnimatedSprite2D.material.set_shader_parameter("line_color", Color(1.0, 1.0, 1.0, 0.0))
+	$AnimatedSprite2D.material.set_shader_parameter("line_thickness", 15.0)
+
 
 func _process(delta):
 	if InsideTruckGlobal.trigger_noise == true and trigger_once == false:
@@ -39,6 +42,9 @@ func _process(delta):
 		$AudioStreamPlayer.play()
 		await get_tree().create_timer(2).timeout
 		_start_dialogue("handle_noise")
+	if InsideTruckGlobal.trigger_fall == true:
+		$AudioStreamPlayer.stop()
+		$truck_noise.stop()
 	if current_state == 0 or current_state == 1:
 		$AnimatedSprite2D.play("idle")
 	elif current_state == 2 and !is_chatting:
@@ -64,6 +70,7 @@ func _process(delta):
 			$AnimatedSprite2D.play("idle")
 
 func _start_dialogue(dialogue_string) -> void:
+	$AnimatedSprite2D.material.set_shader_parameter("line_color", Color(1.0, 1.0, 1.0, 0.0))
 	print(dialogue_string)
 	var dialog = Dialogic.start(dialogue_string)
 	add_child(dialog)
@@ -113,10 +120,13 @@ func _on_chat_detection_body_entered(body: Node) -> void:
 	if body.has_method("player"):
 		player = body
 		player_in_chat_zone = true
+		if InsideTruckGlobal.mama_exit == false:
+			$AnimatedSprite2D.material.set_shader_parameter("line_color", Color(1.0, 1.0, 0.0, 1.0))
 
 func _on_chat_detection_body_exited(body: Node) -> void:
 	if body.has_method("player"):
 		player_in_chat_zone = false
+		$AnimatedSprite2D.material.set_shader_parameter("line_color", Color(1.0, 1.0, 1.0, 0.0))
 
 func _on_timer_timeout() -> void:
 	$Timer.wait_time = choose([0.5, 1, 1.5])

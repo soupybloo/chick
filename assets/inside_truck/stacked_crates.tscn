@@ -1,7 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://ddcbieglfhvd0"]
+[gd_scene load_steps=9 format=3 uid="uid://ddcbieglfhvd0"]
 
 [ext_resource type="Texture2D" uid="uid://bbpj3v8a8ic4a" path="res://assets/inside_truck/stacked_crates.png" id="1_00hsq"]
 [ext_resource type="Script" path="res://assets/inside_truck/stacked_crates.gd" id="1_d2mn1"]
+[ext_resource type="Shader" path="res://materials/inside_truck/inside_truck_sibling1.gdshader" id="2_vsrts"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0qdtl"]
+shader = ExtResource("2_vsrts")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 7.648
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f1xa7"]
 atlas = ExtResource("1_00hsq")
@@ -28,6 +34,7 @@ radius = 250.072
 script = ExtResource("1_d2mn1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_0qdtl")
 position = Vector2(2, -0.999992)
 scale = Vector2(0.67588, 0.638177)
 sprite_frames = SubResource("SpriteFrames_q3e2w")

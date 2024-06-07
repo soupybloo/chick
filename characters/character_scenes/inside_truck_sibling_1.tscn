@@ -1,8 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://yogv430pp5pf"]
+[gd_scene load_steps=12 format=3 uid="uid://yogv430pp5pf"]
 
 [ext_resource type="Texture2D" uid="uid://bhe7qip1ptf5j" path="res://characters/character_textures/sibling1_spritesheet.png" id="1_3w5or"]
 [ext_resource type="Script" path="res://characters/character_scenes/inside_truck_sibling_1.gd" id="1_84oi0"]
 [ext_resource type="Texture2D" uid="uid://8omvucxltksf" path="res://characters/character_textures/sibling1_spritesheet_update.png" id="2_adnle"]
+[ext_resource type="Shader" path="res://materials/inside_truck/inside_truck_sibling1.gdshader" id="2_ewca1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lxdwi"]
+shader = ExtResource("2_ewca1")
+shader_parameter/line_color = Color(1, 1, 0, 1)
+shader_parameter/line_thickness = 10.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j88r3"]
 atlas = ExtResource("2_adnle")
@@ -48,6 +54,7 @@ radius = 99.0454
 script = ExtResource("1_84oi0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_lxdwi")
 position = Vector2(0, 5.96046e-08)
 scale = Vector2(0.115155, 0.117605)
 sprite_frames = SubResource("SpriteFrames_1dcwi")

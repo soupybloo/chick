@@ -1,17 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://5dqmjkikr8to"]
+[gd_scene load_steps=9 format=3 uid="uid://5dqmjkikr8to"]
 
-[ext_resource type="Texture2D" uid="uid://dd4xlkxs5p3e5" path="res://assets/inside_truck/flight_poster.png" id="1_5mf8o"]
 [ext_resource type="Script" path="res://assets/inside_truck/flight_poster.gd" id="1_qikvt"]
+[ext_resource type="Shader" path="res://materials/inside_truck/inside_truck_sibling1.gdshader" id="2_ete1v"]
+[ext_resource type="Texture2D" uid="uid://d3144f2xyiutn" path="res://assets/inside_truck/flight_poster_small.png" id="3_g8eaj"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ul72d"]
-atlas = ExtResource("1_5mf8o")
-region = Rect2(0, 0, 894, 721)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_crqpm"]
+shader = ExtResource("2_ete1v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 1.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmeid"]
+atlas = ExtResource("3_g8eaj")
+region = Rect2(0, 0, 1080, 1080)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gutia"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ul72d")
+"texture": SubResource("AtlasTexture_pmeid")
 }],
 "loop": true,
 "name": &"default",
@@ -28,12 +34,12 @@ radius = 126.016
 script = ExtResource("1_qikvt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_crqpm")
 position = Vector2(-1.90735e-06, -1)
 scale = Vector2(0.141344, 0.129484)
 sprite_frames = SubResource("SpriteFrames_gutia")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(-0.5, -1)
 shape = SubResource("RectangleShape2D_qwjgm")
 

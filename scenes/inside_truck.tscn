@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dyf8fpw06noar"]
+[gd_scene load_steps=22 format=3 uid="uid://dyf8fpw06noar"]
 
 [ext_resource type="Texture2D" uid="uid://cn5cugnld0jxy" path="res://backgrounds/inside_truck_background_large.png" id="1_5q4k4"]
 [ext_resource type="Script" path="res://scenes/inside_truck_global.gd" id="1_b0jho"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://di4xvmva3yttv" path="res://assets/inside_truck/truck_handle.tscn" id="14_mhh06"]
 [ext_resource type="PackedScene" uid="uid://cej1vbydf68bn" path="res://characters/character_scenes/inside_truck_sibling_4.tscn" id="15_gds4g"]
 [ext_resource type="PackedScene" uid="uid://brm50ao0wacok" path="res://characters/character_scenes/inside_truck_transition_screen.tscn" id="17_d2r64"]
+[ext_resource type="Texture2D" uid="uid://cmx400qbm5x4x" path="res://assets/inside_truck/Black.png" id="18_37odt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_amdqg"]
 texture = ExtResource("2_cp6ja")
@@ -466,25 +467,21 @@ texture = ExtResource("2_cp6ja")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_amdqg")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7k02e"]
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_b0jho")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
-offset_left = -531.0
+offset_left = -523.0
 offset_top = -71.0
-offset_right = 20.0
+offset_right = 28.0
 offset_bottom = 138.0
 scale = Vector2(4.89775, 4.61124)
 pivot_offset = Vector2(21.9741, 51.3255)
 texture = ExtResource("1_5q4k4")
-expand_mode = 2
-
-[node name="main_chick" parent="." instance=ExtResource("2_e44iv")]
-position = Vector2(-325, 474)
-
-[node name="Camera2D" type="Camera2D" parent="main_chick"]
-position = Vector2(517, -90)
+expand_mode = 1
 
 [node name="TileMap" type="TileMap" parent="."]
 visible = false
@@ -493,6 +490,12 @@ scale = Vector2(4, 4)
 tile_set = SubResource("TileSet_gdrrx")
 format = 2
 layer_0/tile_data = PackedInt32Array(720886, 393216, 1, 589814, 393216, 1, 655350, 393216, 2, 458742, 393216, 1, 524278, 393216, 2, 327670, 393216, 1, 393206, 393216, 2, 196598, 393216, 1, 262134, 393216, 2, 65526, 393216, 1, 131062, 393216, 2, -65546, 393216, 1, -10, 393216, 2, -196618, 393216, 2, -131082, 393216, 2, -262154, 393216, 1, 720889, 393216, 1, 131065, 393216, 2, 720887, 393216, 1, 720888, 393216, 1, 720890, 393216, 1, 720891, 393216, 1, 720892, 393216, 1, 720893, 393216, 1, 720894, 393216, 1, 720895, 393216, 1, 655360, 393216, 1, 655361, 393216, 1, 655362, 393216, 1, 655363, 393216, 1, 655364, 393216, 1, 655365, 393216, 1, 655366, 393216, 1, 655367, 393216, 1, 655368, 393216, 1, 655369, 393216, 1, 655370, 393216, 1, 655371, 393216, 1, 655372, 393216, 1, 655373, 393216, 1, 655374, 393216, 1, 655375, 393216, 1, 655376, 393216, 1, 655377, 393216, 1, 655378, 393216, 1, 655379, 393216, 1, 655380, 393216, 1, 655381, 393216, 1, 655382, 393216, 1, 655383, 393216, 1, 655384, 393216, 1, 655385, 393216, 1, 655386, 393216, 1, 655387, 393216, 1, 655388, 393216, 1, 655389, 393216, 1, 655390, 393216, 1, 655391, 393216, 1, 655392, 393216, 1, 589856, 393216, 1, 524320, 393216, 1, 458784, 393216, 1, 393248, 393216, 1, 327712, 393216, 1, 262176, 393216, 1, 196640, 393216, 1, 131104, 393216, 1, 65568, 393216, 1, 32, 393216, 1, -65504, 393216, 1, -131040, 393216, 1, -196576, 393216, 1, -262112, 393216, 1, 131066, 458752, 1, 131067, 458752, 1, 131068, 458752, 1, 131069, 458752, 1, 131070, 458752, 1, 131071, 458752, 1, 65536, 458752, 1, 65537, 458752, 1, 65538, 458752, 1, 65539, 458752, 1, 65540, 458752, 1, 65541, 458752, 1, 65542, 458752, 1, 65543, 458752, 1, 65544, 458752, 1, 65545, 458752, 1, 65546, 458752, 1, 65547, 458752, 1, 65548, 458752, 1, 65549, 458752, 1, 65550, 458752, 1, 65551, 458752, 1, 65552, 458752, 1, 65553, 458752, 1, 65554, 458752, 1, 65555, 458752, 1, 65556, 458752, 1, 65557, 458752, 1, 65558, 458752, 1, 65559, 458752, 1, 65560, 458752, 1, 65561, 458752, 1, 65562, 458752, 1, 65563, 458752, 1, 65564, 458752, 1, 65565, 458752, 1, 65566, 458752, 1, 65567, 458752, 1, 131064, 458752, 1, 131063, 458752, 1)
+
+[node name="main_chick" parent="." instance=ExtResource("2_e44iv")]
+position = Vector2(-325, 474)
+
+[node name="Camera2D" type="Camera2D" parent="main_chick"]
+position = Vector2(517, -90)
 
 [node name="chicken_coop" parent="." instance=ExtResource("4_qgeha")]
 position = Vector2(673, 153)
@@ -513,7 +516,7 @@ position = Vector2(1459, 514)
 position = Vector2(778, 526)
 
 [node name="flight_poster" parent="." instance=ExtResource("10_d2siy")]
-position = Vector2(1036, 205)
+position = Vector2(1034, 208)
 
 [node name="stacked_crates" parent="." instance=ExtResource("11_ion4h")]
 position = Vector2(1926, 431)
@@ -537,3 +540,51 @@ position = Vector2(-325, 224)
 position = Vector2(1606, 274)
 
 [node name="TransitionScreen" parent="." instance=ExtResource("17_d2r64")]
+
+[node name="black" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="black"]
+position = Vector2(725, 932)
+scale = Vector2(5.30859, 1)
+texture = ExtResource("18_37odt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="black"]
+shape = SubResource("RectangleShape2D_7k02e")
+
+[node name="black2" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="black2"]
+position = Vector2(731, -489)
+scale = Vector2(5.30859, 1)
+texture = ExtResource("18_37odt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="black2"]
+shape = SubResource("RectangleShape2D_7k02e")
+
+[node name="black3" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="black3"]
+position = Vector2(2316.5, 200)
+scale = Vector2(1.05664, 3.85547)
+texture = ExtResource("18_37odt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="black3"]
+shape = SubResource("RectangleShape2D_7k02e")
+
+[node name="black4" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="black4"]
+position = Vector2(-854, 183)
+scale = Vector2(1.05664, 3.85547)
+texture = ExtResource("18_37odt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="black4"]
+shape = SubResource("RectangleShape2D_7k02e")
+
+[node name="MenuButtonControls" type="MenuButton" parent="."]
+offset_left = -506.0
+offset_top = 593.0
+offset_right = -199.0
+offset_bottom = 647.0
+text = "Press arrows to move, \"P\" to peck, 
+and \"Enter\" continue through dialogue"

@@ -28,6 +28,8 @@ func _ready():
 	start_pos = position
 	Dialogic.signal_event.connect(DialogicSignal)
 	print("Dialogic signal connected")
+	$AnimatedSprite2D.material.set_shader_parameter("line_color", Color(1.0, 1.0, 1.0, 0.0))
+	$AnimatedSprite2D.material.set_shader_parameter("line_thickness", 22.0)
 
 func _process(delta):
 	if current_state == 0 or current_state == 1:
@@ -54,6 +56,7 @@ func _process(delta):
 			$AnimatedSprite2D.play("idle")
 
 func _start_dialogue() -> void:
+	$AnimatedSprite2D.material.set_shader_parameter("line_color", Color(1.0, 1.0, 1.0, 0.0))
 	var dialogue_line = str(randi_range(1, 2))
 	print("Starting dialogue: siblingChick2Random" + dialogue_line)
 	var dialog = Dialogic.start("siblingChick2Random" + dialogue_line)
@@ -104,11 +107,14 @@ func _on_chat_detection_body_entered(body: Node) -> void:
 		player = body
 		player_in_chat_zone = true
 		print("Player entered chat zone")
+		if InsideTruckGlobal.sibling1_exit == false:
+			$AnimatedSprite2D.material.set_shader_parameter("line_color", Color(1.0, 1.0, 0.0, 1.0))
 
 func _on_chat_detection_body_exited(body: Node) -> void:
 	if body.has_method("player"):
 		player_in_chat_zone = false
 		print("Player exited chat zone")
+		$AnimatedSprite2D.material.set_shader_parameter("line_color", Color(1.0, 1.0, 1.0, 0.0))
 
 func _on_timer_timeout() -> void:
 	$Timer.wait_time = choose([0.5, 1, 1.5])

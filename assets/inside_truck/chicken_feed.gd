@@ -12,6 +12,8 @@ func _ready():
 	randomize()
 	Dialogic.signal_event.connect(DialogicSignal)
 	print("Dialogic signal connected")
+	$AnimatedSprite2D.material.set_shader_parameter("line_color", Color(1.0, 1.0, 1.0, 0.0))
+	$AnimatedSprite2D.material.set_shader_parameter("line_thickness", 5.0)
 
 func _process(delta):
 	if player_in_chat_zone:
@@ -20,6 +22,7 @@ func _process(delta):
 			_start_dialogue("chicken_feed_popup")
 
 func _start_dialogue(dialogue_string) -> void:
+	$AnimatedSprite2D.material.set_shader_parameter("line_color", Color(1.0, 1.0, 1.0, 0.0))
 	var dialog = Dialogic.start(dialogue_string)
 	add_child(dialog)
 	dialog.visible = true
@@ -45,7 +48,11 @@ func _on_chat_detection_body_entered(body):
 	if body.has_method("player"):
 		player = body
 		player_in_chat_zone = true
+		if InsideTruckGlobal.chicken_feed_exit == false:
+			$AnimatedSprite2D.material.set_shader_parameter("line_color", Color(1.0, 1.0, 0.0, 1.0))
+
 
 func _on_chat_detection_body_exited(body):
 	if body.has_method("player"):
 		player_in_chat_zone = false
+		$AnimatedSprite2D.material.set_shader_parameter("line_color", Color(1.0, 1.0, 1.0, 0.0))

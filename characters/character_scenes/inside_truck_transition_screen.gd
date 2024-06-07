@@ -8,4 +8,12 @@ func _process(delta):
 		transition()
 	
 func transition():
-	$AnimationPlayer.play("fade_to_white")
+	#$AnimationPlayer.play("fade_to_white")
+	$VideoStreamPlayer.play()
+	
+	
+
+
+func _on_video_stream_player_finished():
+	pass
+	# something something load video.

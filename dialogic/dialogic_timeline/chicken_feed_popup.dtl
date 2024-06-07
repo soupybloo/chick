@@ -1,3 +1,3 @@
 join Chicken_Feed 2
-Oh look, chicken seeds!
+Yippee! I found some chicken seeds. This is my lucky day!
 [signal arg="exit_chicken_feed"]
