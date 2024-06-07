@@ -42,6 +42,9 @@ func _process(delta):
 		$AudioStreamPlayer.play()
 		await get_tree().create_timer(2).timeout
 		_start_dialogue("handle_noise")
+	if InsideTruckGlobal.trigger_fall == true:
+		$AudioStreamPlayer.stop()
+		$truck_noise.stop()
 	if current_state == 0 or current_state == 1:
 		$AnimatedSprite2D.play("idle")
 	elif current_state == 2 and !is_chatting:

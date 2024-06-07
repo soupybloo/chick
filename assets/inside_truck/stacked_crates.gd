@@ -48,7 +48,7 @@ func _on_chat_detection_body_entered(body):
 	if body.has_method("player"):
 		player = body
 		player_in_chat_zone = true
-		if InsideTruckGlobal.sibling4_exit == false:
+		if InsideTruckGlobal.stacked_crates_exit == false:
 			$AnimatedSprite2D.material.set_shader_parameter("line_color", Color(1.0, 1.0, 0.0, 1.0))
 
 func _on_chat_detection_body_exited(body):

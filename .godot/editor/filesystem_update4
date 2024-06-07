@@ -18,3 +18,13 @@ res://assets/inside_truck/stacked_crates.gd
 res://characters/character_scenes/inside_truck_sibling_1.gd
 res://assets/inside_truck/chicken_coop.tscn
 res://assets/inside_truck/chicken_water.tscn
+res://dialogic/dialogic_characters/Chicken_Feed.dch
+res://dialogic/dialogic_timeline/chicken_feed_popup.dtl
+res://dialogic/dialogic_timeline/flight_poster_popup.dtl
+res://scenes/InformationButton.gd
+res://scenes/PopUpNode.gd
+res://assets/inside_truck/pop_up_node.tscn
+res://scenes/ControlButton.gd
+res://scenes/ControlButtonScriptReal.gd
+res://scenes/PopUpControls.gd
+res://scenes/inside_truck_global.gd

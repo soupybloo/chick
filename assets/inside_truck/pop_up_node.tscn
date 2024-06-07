@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://dl0t0gdfhp2cf"]
+
+[sub_resource type="GDScript" id="GDScript_c3xuh"]
+script/source = "extends Control
+
+#var text_to_show = \"this is a popup\"
+#var show_time = 1
+#
+#func _ready():
+	#$ColorRect/Label.text = text_to_show
+	#$Time.start(show_time)
+#
+#func _on_timer_timeout():
+	#queue_free()
+"
+
+[node name="PopUpNode" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = SubResource("GDScript_c3xuh")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -436.0
+offset_top = 279.0
+offset_right = 157.0
+offset_bottom = 478.0
+color = Color(5.77877e-07, 0.601831, 0.601831, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 93.0
+offset_right = 428.0
+offset_bottom = 192.0
+text = "Here are instructions"
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="ColorRect"]
+
+[connection signal="timeout" from="ColorRect/Timer" to="." method="_on_timer_timeout"]
