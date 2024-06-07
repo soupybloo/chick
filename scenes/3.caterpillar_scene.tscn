@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scenes/3.caterpillar_scene.gd" id="1_ws6cn"]
 [ext_resource type="Texture2D" uid="uid://laa2oboh1koj" path="res://terrain/Terrain (16x16).png" id="2_gt0j1"]
 [ext_resource type="PackedScene" uid="uid://8vdibio3twlg" path="res://characters/character_scenes/placeholder_character.tscn" id="3_gnimc"]
-[ext_resource type="Texture2D" path="res://backgrounds/8-bit road.jpg" id="3_x7vfn"]
+[ext_resource type="Texture2D" uid="uid://bfk4w20souc5c" path="res://backgrounds/8-bit road.jpg" id="3_x7vfn"]
 [ext_resource type="PackedScene" uid="uid://cxi0lqxx5h07h" path="res://characters/character_scenes/rat_character.tscn" id="4_jug02"]
 [ext_resource type="Texture2D" uid="uid://dujxtopyek40g" path="res://backgrounds/Background assets/shitty cardboard box.png" id="5_oj7j5"]
 

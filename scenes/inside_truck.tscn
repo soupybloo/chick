@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://di4xvmva3yttv" path="res://assets/inside_truck/truck_handle.tscn" id="14_mhh06"]
 [ext_resource type="PackedScene" uid="uid://cej1vbydf68bn" path="res://characters/character_scenes/inside_truck_sibling_4.tscn" id="15_gds4g"]
 [ext_resource type="PackedScene" uid="uid://brm50ao0wacok" path="res://characters/character_scenes/inside_truck_transition_screen.tscn" id="17_d2r64"]
-[ext_resource type="Texture2D" path="res://assets/inside_truck/Black.png" id="18_37odt"]
+[ext_resource type="Texture2D" uid="uid://cmx400qbm5x4x" path="res://assets/inside_truck/Black.png" id="18_37odt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_amdqg"]
 texture = ExtResource("2_cp6ja")

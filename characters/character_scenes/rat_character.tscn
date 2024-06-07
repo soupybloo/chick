@@ -1,9 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://cxi0lqxx5h07h"]
+[gd_scene load_steps=11 format=3 uid="uid://cxi0lqxx5h07h"]
 
-[ext_resource type="Texture2D" path="res://characters/character_textures/rat-spritesheet.png" id="1_lo7ea"]
+[ext_resource type="Texture2D" uid="uid://cx58ygu6sckpi" path="res://characters/character_textures/rat-spritesheet.png" id="1_lo7ea"]
+[ext_resource type="Shader" path="res://materials/inside_truck/inside_truck_sibling1.gdshader" id="2_3kmib"]
 [ext_resource type="Script" path="res://characters/character_scenes/rat_character.gd" id="2_mllj2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xikxt"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wq3it"]
+shader = ExtResource("2_3kmib")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 1.0
 
 [sub_resource type="Animation" id="Animation_m50p0"]
 length = 0.001
@@ -61,6 +67,7 @@ shape = SubResource("CircleShape2D_xikxt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
+material = SubResource("ShaderMaterial_wq3it")
 position = Vector2(570, 36)
 scale = Vector2(6.84, 6.84)
 texture = ExtResource("1_lo7ea")
