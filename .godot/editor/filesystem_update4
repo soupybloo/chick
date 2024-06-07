@@ -1,5 +1,6 @@
-res://scenes/3.caterpillar_scene.tscn
 res://scenes/inside_truck.tscn
 res://scenes/5.flower_pot.tscn
 res://characters/character_scenes/placeholder_character.tscn
-res://test-world.tscn
+res://scenes/3.caterpillar_scene.tscn
+res://characters/character_scenes/rat_character.tscn
+res://characters/character_scenes/inside_truck_mama.tscn
