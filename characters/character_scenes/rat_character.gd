@@ -12,9 +12,10 @@ func _ready():
 	
 
 func _process(delta):
-	if player_in_area and Input.is_action_just_pressed("peck") and !player_chatting:
-		player_chatting = true
-		_start_dialogue("rat_popup1")
+	if player_in_area:
+		if Input.is_action_just_pressed("peck") and !player_chatting:
+			player_chatting = true
+			_start_dialogue("rat_popup1")
 	
 	
 func _start_dialogue(dialogue_string) -> void:
