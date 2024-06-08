@@ -12,3 +12,6 @@ res://scenes/practice_pickup.tscn
 res://characters/character_scenes/rat_character.tscn
 res://characters/character_scenes/caterpillar.tscn
 res://characters/character_scenes/rat_character.gd
+res://scenes/Flower.gd
+res://assets/inside_truck/flight_poster.tscn
+res://assets/flower_pot/flower.tscn
