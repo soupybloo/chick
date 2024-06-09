@@ -10,6 +10,9 @@ func _process(delta):
 func transition():
 	#$AnimationPlayer.play("fade_to_white")
 	$VideoStreamPlayer.play()
+	
+	
 
-func _on_video_stream_player_finished():
-	get_tree().change_scene_to_file("res://scenes/3.caterpillar_scene.tscn")
+func _on_texture_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/inside_truck.tscn")
+	 # Replace with function body.

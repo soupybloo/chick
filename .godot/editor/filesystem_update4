@@ -17,3 +17,4 @@ res://scenes/1.truck_scene.tscn
 res://scenes/2.chase_scene.tscn
 res://characters/character_scenes/caterpillar.tscn
 res://characters/character_scenes/inside_truck_transition_screen.gd
+res://characters/character_scenes/openingScene.gd

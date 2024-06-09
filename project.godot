@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="chick"
-run/main_scene="res://Scenes/1.truck_scene.tscn"
+run/main_scene="res://characters/character_scenes/openingScene.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
