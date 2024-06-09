@@ -1,10 +1,4 @@
-res://materials/inside_truck
-res://assets/flower_pot
-res://dialogic/dialogic_timeline
-res://assets/inside_truck
-res://characters/character_scenes
-res://characters/character_textures/placeholder_character
-res://dialogic/dialogic_characters
-res://
+res://scenes
 res://characters/character_scenes
 res://Scenes
+res://characters/character_textures/placeholder_character

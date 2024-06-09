@@ -47,6 +47,8 @@ func pluck_flower():
 	if nearby_flower:
 		nearby_flower.queue_free()
 		nearby_flower = null
+		Flowerglobal.totalFlowers -= 1
+		print(Flowerglobal.totalFlowers)
 		
 func _on_Area2D_body_entered(body):
 	if body.name == "Flower":
