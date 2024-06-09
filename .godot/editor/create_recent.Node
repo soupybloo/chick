@@ -1,6 +1,5 @@
-TextureButton
-Node2D
 TextureRect
+Node2D
 Node
 CollisionShape2D
 Area2D
