@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 InsideTruckGlobal="*res://scenes/inside_truck_global.gd"
+Flowerglobal="*res://scenes/flowerglobal.gd"
 
 [dialogic]
 

@@ -1,0 +1,78 @@
+[gd_scene load_steps=8 format=3 uid="uid://bl4781cy6erse"]
+
+[ext_resource type="Script" path="res://characters/character_scenes/inside_truck_transition_screen.gd" id="1_fl0o8"]
+[ext_resource type="VideoStream" path="res://openingchick.ogv" id="2_5usrn"]
+[ext_resource type="Script" path="res://characters/character_scenes/transitionToDia.gd" id="3_fgk82"]
+[ext_resource type="Texture2D" uid="uid://dl6ysiuq70kl8" path="res://Screenshot 2024-06-08 at 7.18.56 PM.png" id="4_2pe6f"]
+
+[sub_resource type="Animation" id="Animation_txihs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gyspy"]
+resource_name = "fade_to_white"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.3, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t0cc3"]
+_data = {
+"RESET": SubResource("Animation_txihs"),
+"fade_to_white": SubResource("Animation_gyspy")
+}
+
+[node name="TransitionScreen" type="CanvasLayer"]
+script = ExtResource("1_fl0o8")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -644.0
+offset_top = -260.0
+offset_right = 2087.0
+offset_bottom = 709.0
+color = Color(1, 1, 1, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_t0cc3")
+}
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 1164.0
+offset_bottom = 684.0
+stream = ExtResource("2_5usrn")
+autoplay = true
+expand = true
+loop = true
+script = ExtResource("3_fgk82")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
+offset_left = 923.0
+offset_top = 549.0
+offset_right = 1896.0
+offset_bottom = 854.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("4_2pe6f")
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

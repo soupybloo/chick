@@ -457,7 +457,7 @@ sources/0 = SubResource("TileSetAtlasSource_3ddin")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5lhmo"]
 size = Vector2(229.5, 211.5)
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
