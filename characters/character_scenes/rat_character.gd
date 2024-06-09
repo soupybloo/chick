@@ -5,6 +5,7 @@ var player_chatting = false
 var has_chatted = false
 var dialogue_timeout = 0.5
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _ready():
 	$Sprite2D/AnimationPlayer.play("idle_rat")
@@ -20,6 +21,7 @@ func _process(delta):
 			if !has_chatted:
 				has_chatted = true
 				_start_dialogue("rat_popup1")
+
 	
 	
 func _start_dialogue(dialogue_string) -> void:
@@ -40,7 +42,8 @@ func _on_chat_detection_box_body_entered(body):
 	player_in_area = true
 	if body.has_method("player"):
 		print("in here")
-		player_in_area = true
+		if !has_chatted:
+			player_in_area = true
 
 
 func _on_chat_detection_box_body_exited(body):

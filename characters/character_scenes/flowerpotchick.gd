@@ -45,10 +45,12 @@ func _physics_process(delta):
 	
 func pluck_flower():
 	if nearby_flower:
+		Flowerglobal.totalFlowers -= 1
+		if Flowerglobal.totalFlowers == 0:
+			get_tree().change_scene_to_file("res://characters/character_scenes/6. ending.tscn")
 		nearby_flower.queue_free()
 		nearby_flower = null
-		Flowerglobal.totalFlowers -= 1
-		print(Flowerglobal.totalFlowers)
+		
 		
 func _on_Area2D_body_entered(body):
 	if body.name == "Flower":

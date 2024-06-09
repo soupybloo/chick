@@ -11,12 +11,19 @@ var isDragging = false;
 var push_force = 80;
 var inertia = 100;
 
+
 #func _input(event):
 	#if event is InputEventMouseButton:
 		#if event.is_pressed() and event.button_index == BUTTON_LEFT:
 			#is_dragging = true
 		#else:
+		
 			#is_dragging = false
+
+
+
+		#
+		
 
 func _physics_process(delta):
 	if (velocity.x > 1 || velocity.x < -1):
@@ -59,13 +66,25 @@ func _physics_process(delta):
 		#if collision.get_collider.is_in_group("movable-object"):
 			#collision.collider.apply_central_impulse(-collision.normal + inertia)
 		#
-
-
 	var isLeft = velocity.x < 0
 	sprite_2d.flip_h = isLeft
 	
+func _on_Area2D_body_entered(body):
+	print("here")
+	if body.name == "Flower":
+		print("finally")
+
 func _player():
 	pass
 
 	#if is_dragging:
 		#var input_vec = Input.get_action_strength("ui_mouse") * Vector2(1, -1)
+
+
+
+
+
+func _on_body_entered(body):
+	print("here")
+	if body.name == "Flower":
+		get_tree().change_scene_to_file("res://scenes/5.flower_pot.tscn")

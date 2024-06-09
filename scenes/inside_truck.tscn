@@ -587,7 +587,7 @@ offset_left = -506.0
 offset_top = 593.0
 offset_right = -199.0
 offset_bottom = 647.0
-text = "Press arrows to move, \"P\" to peck, 
+text = "Press arrows to move, \"P\" to explore around, space to jump
 and \"Enter\" continue through dialogue"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3o0ytgkh1ddt"]
+
+[ext_resource type="VideoStream" path="res://characters/character_scenes/cat.ogv" id="2_j81nm"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer"]
+offset_right = 1134.0
+offset_bottom = 650.0
+stream = ExtResource("2_j81nm")
+autoplay = true
+expand = true
