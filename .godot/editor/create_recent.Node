@@ -1,3 +1,4 @@
+AudioStreamPlayer2D
 TextureRect
 Node2D
 Node
@@ -10,5 +11,4 @@ VideoStreamPlayer
 ColorRect
 CanvasLayer
 AudioStreamPlayer
-AudioStreamPlayer2D
 AnimationTree
